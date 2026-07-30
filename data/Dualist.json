@@ -1,0 +1,17 @@
+{
+    "id": 130464801,
+    "name": "Dualist",
+    "author": "Sync",
+    "creators": ["Cluncherp", "Sync", "Twandash"],
+    "verifier": "theworldofme",
+    "verification": "https://youtu.be/QKiDZIC4Yy4?si=X9LgPQI2iBo6qU-Z",
+    "percentToQualify": "100",
+    "records": [
+        {
+            "user": "Rqd",
+            "link": "https://youtu.be/QKiDZIC4Yy4?si=X9LgPQI2iBo6qU-Z",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
