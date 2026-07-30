@@ -1,39 +1,27 @@
 {
     "id": 64100176,
     "name": "Tenkai",
-    "author": "DanZmeN",
+    "author": "HidekiX",
     "creators": [],
-    "verifier": "npesta",
-    "verification": "https://youtu.be/7hxdtpfKBi4?si=EmVnf3HVvphauB4K",
+    "verifier": "Luqualizer",
+    "verification": "https://youtu.be/I2ISOu9N4P0?si=NpdhWTwlZRuWdU0K",
     "percentToQualify": "100",
     "records": [
         {
-            "user": "Technical",
-            "link": "https://youtu.be/7hxdtpfKBi4?si=EmVnf3HVvphauB4K",
-            "percent": 100,
-            "hz": 240
-        },
-        {
-            "user": "Gizbro",
-            "link": "https://youtu.be/7hxdtpfKBi4?si=EmVnf3HVvphauB4K",
-            "percent": 100,
-            "hz": 240
-        },
-        {
-            "user": "Golden",
-            "link": "https://youtu.be/7hxdtpfKBi4?si=EmVnf3HVvphauB4K",
+            "user": "TGI",
+            "link": "https://youtu.be/I2ISOu9N4P0?si=NpdhWTwlZRuWdU0K",
             "percent": 100,
             "hz": 240
         },
         {
             "user": "Draconyx",
-            "link": "https://www.youtube.com/live/TKKVwXCGJqM?si=J3MgjDvbB57KCMVt&t=5137",
+            "link": "https://www.youtube.com/watch?v=kJYy_kbQ7e0",
             "percent": 100,
             "hz": 240
         },
         {
             "user": "FireXY",
-            "link": "https://www.youtube.com/live/TKKVwXCGJqM?si=J3MgjDvbB57KCMVt&t=5137",
+            "link": "https://www.youtube.com/watch?v=kJYy_kbQ7e0",
             "percent": 100,
             "hz": 240
         }
