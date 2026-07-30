@@ -1,0 +1,29 @@
+{
+    "id": 123501215,
+    "name": "Specthys",
+    "author": "gBen",
+    "creators": [],
+    "verifier": "zof",
+    "verification": "https://youtu.be/5oS0FPGNwgk?si=3gnnhrIE_k-NnMLs",
+    "percentToQualify": "100",
+    "records": [
+        {
+            "user": "Jasuki",
+            "link": "https://youtu.be/5oS0FPGNwgk?si=3gnnhrIE_k-NnMLs",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Draconyx",
+            "link": "https://www.youtube.com/watch?v=_cUmQ2MYbCU",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "FireXY",
+            "link": "https://www.youtube.com/watch?v=_cUmQ2MYbCU",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
