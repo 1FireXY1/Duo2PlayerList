@@ -1,0 +1,29 @@
+{
+    "id": 93792764,
+    "name": "BEELINE",
+    "author": "Galaxxyss",
+    "creators": ["7AK", "Waffl3x", "Galaxxyss", "MadisonYuko", "pocke"],
+    "verifier": "Zeronium",
+    "verification": "https://youtu.be/ppN1Bae8UDE?si=5_uUTwNrpB5jpmSP",
+    "percentToQualify": "100",
+    "records": [
+        {
+            "user": "Mooftwo",
+            "link": "https://youtu.be/ppN1Bae8UDE?si=5_uUTwNrpB5jpmSP",
+            "percent": 100,
+            "hz": 280
+        },
+        {
+            "user": "Draconyx",
+            "link": "https://www.youtube.com/watch?v=YPMsaOIbE1s",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "FireXY",
+            "link": "https://www.youtube.com/watch?v=YPMsaOIbE1s",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
