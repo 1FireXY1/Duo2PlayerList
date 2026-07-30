@@ -3,7 +3,6 @@
     "name": "SAMPLELEVEL2",
     "author": "Solo_Creator",
     "creators": ["a", "b", "c"],
-    "verifier": "a",
     "verifier": "b",
     "verification": "https://www.youtube.com/watch?v=ISTl28wKSXc",
     "percentToQualify": "100",
