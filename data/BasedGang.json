@@ -8,5 +8,23 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "Koopazu",
+            "link": "https://www.youtube.com/watch?v=waS4YTHvG8M",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "FireXY",
+            "link": "https://www.youtube.com/watch?v=lI7YwdLwoKg",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Draconyx",
+            "link": "https://www.youtube.com/watch?v=lI7YwdLwoKg",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
