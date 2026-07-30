@@ -1,1 +1,29 @@
-
+{
+    "id": 99546275,
+    "name": "jarvis 2 PLAYERS map",
+    "author": "robotchief",
+    "creators": [],
+    "verifier": "Trenonicle",
+    "verification": "https://youtu.be/qEwEMN2gYFY?si=A8pG-mVV-UTyMBsf",
+    "percentToQualify": "100",
+    "records": [
+        {
+            "user": "robotchief",
+            "link": "https://youtu.be/qEwEMN2gYFY?si=A8pG-mVV-UTyMBsf",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Draconyx",
+            "link": "https://www.youtube.com/watch?v=P3A6Lb54Zik",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "FireXY",
+            "link": "https://www.youtube.com/watch?v=P3A6Lb54Zik",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
