@@ -2,12 +2,18 @@
     "id": 57436521,
     "name": "Horros",
     "author": "Shrc",
-    "creators": "Shrc", "a",
-    "verifier": "Shrc",
-    "verification": "https://youtu.be/kbXtNGaobvE?si=KiX2sOW2acm0mK1y",
+    "creators": [],
+    "verifier": "TheyCallMeEvan",
+    "verification": "https://www.youtube.com/watch?v=FLg_ROcfAU8",
     "percentToQualify": 100,
     "password": "Not Copyable",
     "records": [
+        {
+            "user": "Polyatomic",
+            "link": "https://www.youtube.com/watch?v=FLg_ROcfAU8",
+            "percent": 100,
+            "hz": 240
+        },
         {
             "user": "FireXY",
             "link": "https://www.youtube.com/watch?v=NZ6d2dZtuLc",
