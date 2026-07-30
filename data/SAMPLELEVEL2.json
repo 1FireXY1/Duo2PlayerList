@@ -3,7 +3,7 @@
     "name": "SAMPLELEVEL2",
     "author": "Solo_Creator",
     "creators": ["a", "b", "c"],
-    "verifier": "Solo_Creator",
+    "verifier": ["a", "b"],
     "verification": "https://www.youtube.com/watch?v=ISTl28wKSXc",
     "percentToQualify": "100",
     "password": "Free To Copy",
