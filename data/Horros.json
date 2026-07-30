@@ -1,0 +1,18 @@
+{
+    "id": 57436521,
+    "name": "Horros",
+    "author": "Shrc",
+    "creators": ["Shrc"],
+    "verifier": "Shrc",
+    "verification": "https://youtu.be/kbXtNGaobvE?si=KiX2sOW2acm0mK1y",
+    "percentToQualify": 100,
+    "password": "Not Copyable",
+    "records": [
+        {
+            "user": "[FireXY, Draconyx]",
+            "link": "https://www.youtube.com/watch?v=NZ6d2dZtuLc",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
