@@ -1,0 +1,29 @@
+{
+    "id": 87130877,
+    "name": "WOBBLING MACHINE",
+    "author": "Smarted",
+    "creators": [],
+    "verifier": "Zeronium",
+    "verification": "https://youtu.be/LevyHFnTyQI?si=cNeZNXsvabceCYDs",
+    "percentToQualify": "100",
+    "records": [
+        {
+            "user": "Kutsu",
+            "link": "https://youtu.be/LevyHFnTyQI?si=cNeZNXsvabceCYDs",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Draconyx",
+            "link": "https://www.youtube.com/watch?v=i3eC6ioGiA4",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "FireXY",
+            "link": "https://www.youtube.com/watch?v=i3eC6ioGiA4",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
