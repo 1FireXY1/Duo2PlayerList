@@ -1,0 +1,17 @@
+{
+    "id": 64405105,
+    "name": "HEX MASTER",
+    "author": "Custi",
+    "creators": [],
+    "verifier": "DavidTheMaze",
+    "verification": "https://youtu.be/RWL8DUdGFYY",
+    "percentToQualify": "100",
+    "records": [
+        {
+            "user": "MatejTheMaze",
+            "link": "https://youtu.be/RWL8DUdGFYY",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
