@@ -1,0 +1,17 @@
+{
+    "id": 123804260,
+    "name": "i just wish i could",
+    "author": "Snoozzzing",
+    "creators": [],
+    "verifier": "Lia",
+    "verification": "https://youtu.be/qbHejBTJJLU?si=P-RiYx1xEWoKwVbl",
+    "percentToQualify": "100",
+    "records": [
+        {
+            "user": "Gecko GD",
+            "link": "https://youtu.be/qbHejBTJJLU?si=P-RiYx1xEWoKwVbl",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
