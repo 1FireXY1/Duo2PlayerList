@@ -1,4 +1,4 @@
-# Welcome to the Geometry Dash Shitty List template!
+# TOTAL LIST LEVELS: 29
 
 # FAQ
 
