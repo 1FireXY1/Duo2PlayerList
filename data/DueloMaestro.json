@@ -1,0 +1,17 @@
+{
+    "id": 23298409,
+    "name": "Duelo Maestro",
+    "author": "Nacho21",
+    "creators": [],
+    "verifier": "#AdvyOut",
+    "verification": "https://youtu.be/y09fXk3BsPs",
+    "percentToQualify": "100",
+    "records": [
+        {
+            "user": "SoulsTRK",
+            "link": "https://youtu.be/y09fXk3BsPs",
+            "percent": 100,
+            "hz": 144
+        }
+    ]
+}
