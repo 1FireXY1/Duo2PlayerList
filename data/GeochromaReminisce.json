@@ -1,0 +1,59 @@
+{
+    "id": 123268699,
+    "name": "Geochroma Reminisce",
+    "author": "DezonGD",
+    "creators": [],
+    "verifier": "DezonGD",
+    "verification": "https://www.youtube.com/watch?v=OL_4LP6hp4s",
+    "percentToQualify": "100",
+    "records": [
+        {
+            "user": "HOLI",
+            "link": "https://www.youtube.com/watch?v=OL_4LP6hp4s",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "SkyGame",
+            "link": "https://www.youtube.com/watch?v=OL_4LP6hp4s",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "zvikito",
+            "link": "https://www.youtube.com/watch?v=OL_4LP6hp4s",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "Mattska",
+            "link": "https://www.youtube.com/watch?v=OL_4LP6hp4s",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "SergC",
+            "link": "https://www.youtube.com/watch?v=OL_4LP6hp4s",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "Flaminick",
+            "link": "https://www.youtube.com/watch?v=OL_4LP6hp4s",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "meanssq",
+            "link": "https://www.youtube.com/watch?v=OL_4LP6hp4s",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "azowned",
+            "link": "https://www.youtube.com/watch?v=OL_4LP6hp4s",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
