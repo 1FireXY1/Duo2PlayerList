@@ -1,1 +1,17 @@
-
+{
+    "id": 69866281,
+    "name": "Arcane16",
+    "author": "zQuavo",
+    "creators": [],
+    "verifier": "zQuavo",
+    "verification": "https://www.youtube.com/watch?v=hadnyFse1bE",
+    "percentToQualify": "100",
+    "records": [
+        {
+            "user": "TanTrum1337",
+            "link": "https://www.youtube.com/watch?v=hadnyFse1bE",
+            "percent": 100,
+            "hz": 
+        }
+    ]
+}
