@@ -1,0 +1,17 @@
+{
+    "id": 104338596,
+    "name": "Copilot",
+    "author": "xenbez7",
+    "creators": ["xenbez7", "Ego11"],
+    "verifier": "RealDes",
+    "verification": "https://youtu.be/rCI8TYL8ypc",
+    "percentToQualify": "100",
+    "records": [
+        {
+            "user": "GDAchlys",
+            "link": "https://youtu.be/rCI8TYL8ypc",
+            "percent": 100,
+            "hz": 75
+        }
+    ]
+}
