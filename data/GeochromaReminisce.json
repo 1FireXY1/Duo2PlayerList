@@ -2,8 +2,8 @@
     "id": 123268699,
     "name": "Geochroma Reminisce",
     "author": "DezonGD",
-    "creators": [],
-    "verifier": "DezonGD",
+    "creators": ["DezonGD"],
+    "verifiers": ["DezonGD", "HOLI", "SkyGame", "zvikito", "Mattska", "SergC", "Flaminick", "meanssq", "azowned"],
     "verification": "https://www.youtube.com/watch?v=OL_4LP6hp4s",
     "percentToQualify": "100",
     "records": [
