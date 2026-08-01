@@ -9,7 +9,7 @@ export default {
             required: true,
         },
         verifier: {
-            type: String,
+            type: Array,
             required: true,
         },
     },
@@ -41,7 +41,10 @@ export default {
                 </p>
                 <div class="type-title-sm">Verifier</div>
                 <p class="type-body">
-                    <span>{{ verifier }}</span>
+                    <template v-for="(verifier, index) in verifiers" :key="\verifier-\$\{verifier\}\`">
+                        <span >{{ verifier }}</span
+                        ><span v-if="index < verifiers.length - 1">, </span>
+                    </template>
                 </p>
             </template>
             <div class="type-title-sm">Publisher</div>
@@ -53,7 +56,10 @@ export default {
 
     computed: {
         selfVerified() {
-            return this.author === this.verifier && this.creators.length === 0;
+            return (
+            this.creators.length === 0 &&
+            this.verifiers.length === 1 &&
+            this.verifiers[0] === this.author
         },
     },
 };
