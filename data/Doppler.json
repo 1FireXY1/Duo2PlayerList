@@ -3,13 +3,13 @@
     "name": "Doppler",
     "author": "At424",
     "creators": ["Latezk", "At424"],
-    "verifier": "At424",
+    "verifiers": ["At424", "Latezk"],
     "verification": "https://youtu.be/WNNgq0cg8B4?si=QFKUun0ofhZ4JPJy",
     "percentToQualify": "100",
     "records": [
         {
-            "user": "Latezk",
-            "link": "https://youtu.be/WNNgq0cg8B4?si=QFKUun0ofhZ4JPJy",
+            "user": "",
+            "link": "",
             "percent": 100,
             "hz": 480
         }
