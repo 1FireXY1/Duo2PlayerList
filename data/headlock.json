@@ -1,0 +1,17 @@
+{
+    "id": 94353238,
+    "name": "headlock",
+    "author": "pocke",
+    "creators": [],
+    "verifier": "redrover",
+    "verification": "https://www.youtube.com/watch?v=Hzoa3i_CLvw",
+    "percentToQualify": "100",
+    "records": [
+        {
+            "user": "Ephr31",
+            "link": "https://www.youtube.com/watch?v=Hzoa3i_CLvw",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
