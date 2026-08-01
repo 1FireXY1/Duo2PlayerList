@@ -59,8 +59,8 @@ export async function fetchLeaderboard() {
 
         // Verification
         const verifier = Object.keys(scoreMap).find(
-            (u) => u.toLowerCase() === level.verifier.toLowerCase(),
-        ) || level.verifier;
+            (u) => u.toLowerCase() === level.verifiers.toLowerCase(),
+        ) || level.verifiers;
         scoreMap[verifier] ??= {
             verified: [],
             completed: [],
