@@ -42,8 +42,8 @@ export default {
                 <div class="type-title-sm">Verifier</div>
                 <p class="type-body">
                     <template v-for="(verifier, index) in verifiers" :key="`verifier-${verifier}`"
-                        <span >{{ verifier }}</span
-                        ><span v-if="index < verifiers.length - 1">, </span>
+                        <span >{{ verifier }}</span>
+                        <span v-if="index < verifiers.length - 1">, </span>
                     </template>
                 </p>
             </template>
@@ -60,7 +60,7 @@ export default {
                 this.creators.length === 0 &&
                 this.verifiers.length === 1 &&
                 this.verifiers[0] === this.author
-            ),
+            );
         },
     },
 };
