@@ -26,7 +26,7 @@ export default {
                 <p class="type-body">
                     <span>{{ author }}</span>
                 </p>
-                <div class="type-title-sm">Verifier</div>
+                <div class="type-title-sm">Verifiers</div>
                 <p class="type-body">
                     <span>{{ verifier }}</span>
                 </p>
@@ -39,7 +39,7 @@ export default {
                         ><span v-if="index < creators.length - 1">, </span>
                     </template>
                 </p>
-                <div class="type-title-sm">Verifier</div>
+                <div class="type-title-sm">Verifiers</div>
                 <p class="type-body">
                     <template v-for="(verifier, index) in verifiers" :key="\`verifier-\$\{verifier\}\`">
                         <span >{{ verifier }}</span>
