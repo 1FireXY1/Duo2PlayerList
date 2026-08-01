@@ -8,7 +8,7 @@ export default {
             type: Array,
             required: true,
         },
-        verifier: {
+        verifiers: {
             type: Array,
             required: true,
         },
