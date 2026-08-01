@@ -58,23 +58,24 @@ export async function fetchLeaderboard() {
         }
 
         // Verification
-    level.verifiers.forEach((verifierName) => {
-        const verifier =
-            Object.keys(scoreMap).find(
-                (u) => u.toLowerCase() === verifierName.toLowerCase(),
-            ) || verifierName;
+        level.verifiers.forEach((verifierName) => {
+            const verifier =
+                Object.keys(scoreMap).find(
+                    (u) => u.toLowerCase() === verifierName.toLowerCase(),
+                ) || verifierName;
 
-        scoreMap[verifier] ??= {
-            verified: [],
-            completed: [],
-            progressed: [],
-        };
+            scoreMap[verifier] ??= {
+                verified: [],
+                completed: [],
+                progressed: [],
+            };
 
-        scoreMap[verifier].verified.push({
-            rank: rank + 1,
-            level: level.name,
-            score: score(rank + 1, 100, level.percentToQualify),
-            link: level.verification,
+            scoreMap[verifier].verified.push({
+                rank: rank + 1,
+                level: level.name,
+                score: score(rank + 1, 100, level.percentToQualify),
+                link: level.verification,
+            });
         });
 
         // Records
