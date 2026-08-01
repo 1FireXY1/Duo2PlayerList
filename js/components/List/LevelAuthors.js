@@ -9,7 +9,7 @@ export default {
             required: true,
         },
         verifier: {
-            type: String,
+            type: Array,
             required: true,
         },
     },
