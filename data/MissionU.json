@@ -1,0 +1,17 @@
+{
+    "id": 136134142,
+    "name": "Mission U",
+    "author": "MattyS28",
+    "creators": ["mbed"],
+    "verifier": "Smiffy777",
+    "verification": "https://youtu.be/A2xGTCZ1h3g",
+    "percentToQualify": "100",
+    "records": [
+        {
+            "user": "Gecko GD",
+            "link": "https://youtu.be/A2xGTCZ1h3g",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
