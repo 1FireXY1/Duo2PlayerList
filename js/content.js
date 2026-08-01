@@ -61,6 +61,7 @@ export async function fetchLeaderboard() {
         const verifiers = level.verifiers ?? [level.verifier];
 
         verifiers.forEach((verifierName) => {
+            const verifier =
                 Object.keys(scoreMap).find(
                     (u) => u.toLowerCase() === verifierName.toLowerCase(),
                 ) || verifierName;
