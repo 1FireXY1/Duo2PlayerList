@@ -28,7 +28,13 @@ export default {
                 </p>
                 <div class="type-title-sm">Verifier</div>
                 <p class="type-body">
-                    <span>{{ verifier }}</span>
+                    <template
+                        v-for="(verifier, index) in verifiers"
+                        :key="`verifier-${verifier}`"
+                    >
+                        <span>{{ verifier }}</span>
+                        <span v-if="index < verifiers.length - 1">, </span>
+                    </template>
                 </p>
             </template>
             <template v-else>
