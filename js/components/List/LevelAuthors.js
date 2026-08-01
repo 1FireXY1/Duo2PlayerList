@@ -8,8 +8,8 @@ export default {
             type: Array,
             required: true,
         },
-        verifiers: {
-            type: Array,
+        verifier: {
+            type: String,
             required: true,
         },
     },
@@ -39,14 +39,9 @@ export default {
                         ><span v-if="index < creators.length - 1">, </span>
                     </template>
                 </p>
-                <div class="type-title-sm">
-                    {{ verifiers.length > 1 ? "Verifiers" : "Verifier" }}
-                </div>
+                <div class="type-title-sm">Verifier</div>
                 <p class="type-body">
-                    <template v-for="(verifier, index) in verifiers" :key="`verifier-${verifier}`">
-                        <span>{{ verifier }}</span>
-                        <span v-if="index < verifiers.length - 1">, </span>
-                    </template>
+                    <span>{{ verifier }}</span>
                 </p>
             </template>
             <div class="type-title-sm">Publisher</div>
@@ -58,10 +53,7 @@ export default {
 
     computed: {
         selfVerified() {
-            return (
-                this.creators.length === 0 &&
-                this.verifiers.length === 1 &&
-                this.verifiers[0] === this.author
-            );
+            return this.author === this.verifier && this.creators.length === 0;
         },
     },
+};
