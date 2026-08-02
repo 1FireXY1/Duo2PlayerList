@@ -25,7 +25,8 @@ export default {
                         Leaderboard may be incorrect, as the following levels could not be loaded: {{ err.join(', ') }}
                     </p>
                 </div>
-
+                <div class="board-container">
+                
                 <!-- SEARCH BAR -->
                 <div class="search-container">
                     <input
@@ -37,8 +38,7 @@ export default {
                     />
                     <button v-if="search" class="clear-btn" @click="search = ''">Clear</button>
                 </div>
-
-                <div class="board-container">
+                
                     <table class="board">
                         <!-- iterate over filteredLeaderboard instead of leaderboard -->
                         <tr v-for="(ientry, i) in filteredLeaderboard" :key="ientry.user">
