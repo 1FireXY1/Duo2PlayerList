@@ -2,29 +2,11 @@
     "id": 56916170,
     "name": "Bang Gang",
     "author": "DanZmeN",
-    "creators": [],
-    "verifier": "npesta",
+    "creators": ["DanZmeN"],
+    "verifier": ["npesta", "Technical", "Gizbro", "Golden"],
     "verification": "https://youtu.be/7hxdtpfKBi4?si=EmVnf3HVvphauB4K",
     "percentToQualify": "100",
     "records": [
-        {
-            "user": "Technical",
-            "link": "https://youtu.be/7hxdtpfKBi4?si=EmVnf3HVvphauB4K",
-            "percent": 100,
-            "hz": 144
-        },
-        {
-            "user": "Gizbro",
-            "link": "https://youtu.be/7hxdtpfKBi4?si=EmVnf3HVvphauB4K",
-            "percent": 100,
-            "hz": 144
-        },
-        {
-            "user": "Golden",
-            "link": "https://youtu.be/7hxdtpfKBi4?si=EmVnf3HVvphauB4K",
-            "percent": 100,
-            "hz": 144
-        },
         {
             "user": "Draconyx",
             "link": "https://www.youtube.com/live/TKKVwXCGJqM?si=J3MgjDvbB57KCMVt&t=5137",
