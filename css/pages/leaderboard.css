@@ -38,13 +38,14 @@
 .page-leaderboard .search-box {
   align-items:center;
   gap:0.5rem;
-  background:#fff;
-  padding:0.35rem;
-  border-radius:10px;
+  background-color: var(--color-primary);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   border:1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 1px 4px rgba(16,24,40,0.04);
+  box-shadow: 0 1px 0.5rem 0 rgba(0, 0, 102, 0.5);
+  transition: transform 100ms ease;
 }
-.search-input { border:none; padding:0.45rem 0.5rem; font-size:0.95rem; background:transparent;
+.search-input { border:none; font: inherit; font-size:0.95rem;
 }
 .clear-btn { background:#f1f5f9; border:none; border-radius:6px; padding:0.25rem 0.5rem; cursor:pointer;
 }
