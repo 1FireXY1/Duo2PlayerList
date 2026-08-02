@@ -12,6 +12,7 @@ export default {
         loading: true,
         selected: 0,
         err: [],
+        search: '', // <-- new: search string bound to the input
     }),
     template: `
         <main v-if="loading">
@@ -24,9 +25,23 @@ export default {
                         Leaderboard may be incorrect, as the following levels could not be loaded: {{ err.join(', ') }}
                     </p>
                 </div>
+
+                <!-- SEARCH BAR -->
+                <div class="search-container">
+                    <input
+                        type="search"
+                        v-model="search"
+                        placeholder="Search players..."
+                        aria-label="Search players"
+                        class="search-input"
+                    />
+                    <button v-if="search" class="clear-btn" @click="search = ''">Clear</button>
+                </div>
+
                 <div class="board-container">
                     <table class="board">
-                        <tr v-for="(ientry, i) in leaderboard">
+                        <!-- iterate over filteredLeaderboard instead of leaderboard -->
+                        <tr v-for="(ientry, i) in filteredLeaderboard" :key="ientry.user">
                             <td class="rank">
                                 <p class="type-label-lg">#{{ i + 1 }}</p>
                             </td>
@@ -93,8 +108,35 @@ export default {
         </main>
     `,
     computed: {
+        // computed property that filters by the search string
+        filteredLeaderboard() {
+            if (!this.search) return this.leaderboard;
+            const q = this.search.toLowerCase().trim();
+            return this.leaderboard.filter((e) =>
+                e.user.toLowerCase().includes(q),
+            );
+        },
+        // use the filtered list for the detailed entry view
         entry() {
-            return this.leaderboard[this.selected];
+            return (
+                this.filteredLeaderboard[this.selected] || {
+                    user: '',
+                    total: 0,
+                    verified: [],
+                    completed: [],
+                    progressed: [],
+                }
+            );
+        },
+    },
+    watch: {
+        // when the search changes, reset selected to first filtered result
+        search() {
+            this.selected = 0;
+        },
+        // if the main leaderboard is replaced (after load), ensure selected is valid
+        leaderboard() {
+            this.selected = 0;
         },
     },
     async mounted() {
