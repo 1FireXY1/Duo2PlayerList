@@ -3,7 +3,7 @@
     "name": "In Synergy",
     "author": "Texic",
     "creators": ["Texic"],
-    "verifier": ["Texic", "Kicek"],
+    "verifiers": ["Texic", "Kicek"],
     "verification": "https://youtu.be/QnvkuQI54Z8?si=46r_liAFlsUPi05_",
     "percentToQualify": "100",
     "records": [
