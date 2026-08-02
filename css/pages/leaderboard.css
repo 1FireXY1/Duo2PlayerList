@@ -103,27 +103,24 @@
 }
 .search {
     border-radius: 14px;
-    font: "Lexend Deca", sans-serif;
     border: 2px solid var(--color-background-hover);
     width: 90%;
     max-width: 22em;
     height: 40px;
     padding-left: 10px;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
     background-color: var(--color-background-hover);
     transition: all, border 120ms ease-out;
     position: relative;
 }
 .clear-search {
     position: absolute;
-    font: "Lexend Deca", sans-serif;
     right: 10px;
     top: 50%;
     transform: translateY(-89%) translateX(-35%);
     background: none;
     border: none;
     cursor: pointer;
+    margin-left: 1rem;
     font-size: 1.2rem;
     opacity: 40%;
     color: var(--color-on-background);
