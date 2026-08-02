@@ -22,6 +22,7 @@
     background-color: var(--color-error);
     color: var(--color-on-error);
 }
+.page-leaderboard .search-container,
 .page-leaderboard .board-container,
 .page-leaderboard .player-container {
     grid-row: 2;
