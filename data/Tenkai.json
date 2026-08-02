@@ -2,17 +2,11 @@
     "id": 64100176,
     "name": "Tenkai",
     "author": "HidekiX",
-    "creators": [],
-    "verifier": "Luqualizer",
+    "creators": ["HidekiX"],
+    "verifier": ["Luqualizer", "TGI"]
     "verification": "https://youtu.be/I2ISOu9N4P0?si=NpdhWTwlZRuWdU0K",
     "percentToQualify": "100",
     "records": [
-        {
-            "user": "TGI",
-            "link": "https://youtu.be/I2ISOu9N4P0?si=NpdhWTwlZRuWdU0K",
-            "percent": 100,
-            "hz": 240
-        },
         {
             "user": "Draconyx",
             "link": "https://www.youtube.com/watch?v=kJYy_kbQ7e0",
