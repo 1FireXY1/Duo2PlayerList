@@ -3,7 +3,7 @@
     "name": "We Are Not The Same",
     "author": "mbed",
     "creators": ["SpKale", "mbed"],
-    "verifier": ["mbed", "SpKale"],
+    "verifiers": ["mbed", "SpKale"],
     "verification": "https://youtu.be/iFbiMw0GVzI?si=MIDX4xzkpJFlS_Hc",
     "percentToQualify": "100",
     "records": [
