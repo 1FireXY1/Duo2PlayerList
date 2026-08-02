@@ -3,7 +3,7 @@
     "name": "Specthys",
     "author": "gBen",
     "creators": ["gBen"],
-    "verifier": ["zof", "Jasuki"],
+    "verifiers": ["zof", "Jasuki"],
     "verification": "https://youtu.be/5oS0FPGNwgk?si=3gnnhrIE_k-NnMLs",
     "percentToQualify": "100",
     "records": [
