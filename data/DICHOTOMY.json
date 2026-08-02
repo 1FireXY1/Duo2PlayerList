@@ -3,7 +3,7 @@
     "name": "DICHOTOMY",
     "author": "Graydient7",
     "creators": ["Graydient7"],
-    "verifier": ["Binary", "Pizazzy"],
+    "verifiers": ["Binary", "Pizazzy"],
     "verification": "https://youtu.be/NtugAmpuitY",
     "percentToQualify": "100",
     "records": [
