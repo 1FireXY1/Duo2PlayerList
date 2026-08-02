@@ -2,17 +2,11 @@
     "id": 93281587,
     "name": "me when machine gang",
     "author": "akunakun",
-    "creators": [],
-    "verifier": "FloofiWan",
+    "creators": ["akunakun"],
+    "verifiers": ["FloofiWan", "Trideapthbear"],
     "verification": "https://youtu.be/t4skHFm7YY0?si=0iQxU-xFdXlfXAiL",
     "percentToQualify": "100",
     "records": [
-        {
-            "user": "Trideapthbear",
-            "link": "https://youtu.be/t4skHFm7YY0?si=0iQxU-xFdXlfXAiL",
-            "percent": 100,
-            "hz": 144
-        },
         {
             "user": "Draconyx",
             "link": "https://www.youtube.com/watch?v=K-h47qVa3mM",
