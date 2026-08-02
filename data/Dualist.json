@@ -3,16 +3,10 @@
     "name": "Dualist",
     "author": "Sync",
     "creators": ["Cluncherp", "Sync", "Twandash"],
-    "verifier": "theworldofme",
+    "verifier": ["theworldofme", "Rqd"],
     "verification": "https://youtu.be/QKiDZIC4Yy4?si=X9LgPQI2iBo6qU-Z",
     "percentToQualify": "100",
     "records": [
-        {
-            "user": "Rqd",
-            "link": "https://youtu.be/QKiDZIC4Yy4?si=X9LgPQI2iBo6qU-Z",
-            "percent": 100,
-            "hz": 240
-        },
         {
             "user": "Draconyx",
             "link": "https://www.youtube.com/watch?v=_3kxU3GD5DI",
