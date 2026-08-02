@@ -2,17 +2,11 @@
     "id": 93732702,
     "name": "Crystal Crusher",
     "author": "Zeniux",
-    "creators": ["ZeusGD", "Zeniux"],
-    "verifier": "Zeniux",
+    "creators": ["Zeniux", "ZeusGD"],
+    "verifiers": ["Zeniux", "ZeusGD"],
     "verification": "https://youtu.be/TtoBzys4TV4?si=ZdzmjDvAglJq5yPY",
     "percentToQualify": "100",
     "records": [
-        {
-            "user": "ZeusGD",
-            "link": "https://youtu.be/TtoBzys4TV4?si=ZdzmjDvAglJq5yPY",
-            "percent": 100,
-            "hz": 240
-        },
         {
             "user": "Draconyx",
             "link": "https://www.youtube.com/watch?v=49URgsMXhWQ",
