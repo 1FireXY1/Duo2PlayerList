@@ -3,7 +3,7 @@
     "name": "Try Together",
     "author": "DianaGWCB",
     "creators": ["DianaGWCB"],
-    "verifier": ["Droid404", "advxed"],
+    "verifiers": ["Droid404", "advxed"],
     "verification": "https://youtu.be/6DZ5lfkhwoc",
     "percentToQualify": "100",
     "records": [
