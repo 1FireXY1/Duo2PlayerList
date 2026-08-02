@@ -39,9 +39,9 @@
 }
 .clear-btn:hover { background:#e2e8f0;
 }
-.page-leaderboard-container.dark .search-box { background: var(--color-primary); border-color:rgba(255,255,255,0.06);
+.page-leaderboard-container.dark .search-box { background: var(--color-on-primary); border-color:rgba(255,255,255,0.06);
 }
-.page-leaderboard-container.dark .search-input { color: var(--color-primary);
+.page-leaderboard-container.dark .search-input { color: var(--color-on-primary);
 }
 .page-leaderboard-container.dark .clear-btn { background:rgba(255,255,255,0.03); color:#cbd5e1;
 }
