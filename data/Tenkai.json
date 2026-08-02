@@ -3,7 +3,7 @@
     "name": "Tenkai",
     "author": "HidekiX",
     "creators": ["HidekiX"],
-    "verifier": ["Luqualizer", "TGI"]
+    "verifiers": ["Luqualizer", "TGI"]
     "verification": "https://youtu.be/I2ISOu9N4P0?si=NpdhWTwlZRuWdU0K",
     "percentToQualify": "100",
     "records": [
