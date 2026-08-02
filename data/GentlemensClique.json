@@ -3,16 +3,10 @@
     "name": "Gentlemens Clique",
     "author": "Alph",
     "creators": ["DnouZ", "Alph", "NathanYAY"],
-    "verifier": "DnuoZ",
+    "verifiers": ["DnuoZ", "NathanYAY"],
     "verification": "https://youtu.be/iiHKeqY65o8?si=1wuPSqYUkZRx8V-8",
     "percentToQualify": "100",
     "records": [
-        {
-            "user": "NathanYAY",
-            "link": "https://youtu.be/iiHKeqY65o8?si=1wuPSqYUkZRx8V-8",
-            "percent": 100,
-            "hz": 240
-        },
         {
             "user": "Draconyx",
             "link": "https://www.youtube.com/watch?v=rcy-uqaR3S0",
