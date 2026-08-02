@@ -3,7 +3,7 @@
     "name": "Sides Of My Mind",
     "author": "MaxxoRMeN",
     "creators": ["MaxxoRMeN"],
-    "verifier": ["TheyCallMeEvan", "Polyatomic"],
+    "verifiers": ["TheyCallMeEvan", "Polyatomic"],
     "verification": "https://youtu.be/RHU27eLFZl4?si=HjKLu_5qYCEe2R3Q",
     "percentToQualify": "100",
     "records": [
