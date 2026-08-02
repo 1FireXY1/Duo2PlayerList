@@ -12,7 +12,7 @@ export default {
         loading: true,
         selected: 0,
         err: [],
-        search: '', // <-- new: search string bound to the input
+        search: '', // search string bound to input
     }),
     template: `
         <main v-if="loading">
@@ -54,9 +54,16 @@ export default {
                                 </button>
                             </td>
                         </tr>
+
+                        <!-- No results row when search is active but nothing matches -->
+                        <tr v-if="search && filteredLeaderboard.length === 0">
+                            <td colspan="3" class="no-results">No players match "{{ search }}"</td>
+                        </tr>
                     </table>
                 </div>
-                <div class="player-container">
+
+                <!-- Player details shown only when there are results -->
+                <div class="player-container" v-if="filteredLeaderboard.length > 0">
                     <div class="player">
                         <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
                         <h3>{{ entry.total }}</h3>
@@ -102,6 +109,14 @@ export default {
                                 </td>
                             </tr>
                         </table>
+                    </div>
+                </div>
+
+                <!-- Message when search produced no results -->
+                <div class="player-container" v-else>
+                    <div class="player" style="height: 100%; justify-content: center; align-items: center;">
+                        <p v-if="search">No players match "{{ search }}"</p>
+                        <p v-else>(ノಠ益ಠ)ノ彡┻━┻</p>
                     </div>
                 </div>
             </div>
