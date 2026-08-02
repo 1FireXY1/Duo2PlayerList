@@ -3,7 +3,7 @@
     "name": "Bang Gang",
     "author": "DanZmeN",
     "creators": ["DanZmeN"],
-    "verifier": ["npesta", "Technical", "Gizbro", "Golden"],
+    "verifiers": ["npesta", "Technical", "Gizbro", "Golden"],
     "verification": "https://youtu.be/7hxdtpfKBi4?si=EmVnf3HVvphauB4K",
     "percentToQualify": "100",
     "records": [
