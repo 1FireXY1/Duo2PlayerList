@@ -2,17 +2,11 @@
     "id": 57436521,
     "name": "Horros",
     "author": "Shrc",
-    "creators": [],
-    "verifier": "Shrc",
+    "creators": ["Shrc"],
+    "verifiers": ["Shrc", "Sr3k"],
     "verification": "https://youtu.be/kbXtNGaobvE?si=PHiIimNNOpaEVFWR",
     "percentToQualify": 100,
     "records": [
-        {
-            "user": "Sr3k",
-            "link": "https://youtu.be/kbXtNGaobvE?si=PHiIimNNOpaEVFWR",
-            "percent": 100,
-            "hz": 240
-        },
         {
             "user": "TheyCallMeEvan",
             "link": "https://www.youtube.com/watch?v=FLg_ROcfAU8",
