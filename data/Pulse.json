@@ -3,7 +3,7 @@
     "name": "Pulse",
     "author": "Puueds",
     "creators": ["Puueds"],
-    "verifier": ["HotNooB", "Fantastic Gime"],
+    "verifiers": ["HotNooB", "Fantastic Gime"],
     "verification": "https://www.youtube.com/watch?v=RNUXGdai0HI",
     "percentToQualify": "100",
     "records": [
