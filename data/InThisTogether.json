@@ -2,17 +2,11 @@
     "id": 97068422,
     "name": "in this together",
     "author": "Frostbite564",
-    "creators": [],
-    "verifier": "Frostbite564",
+    "creators": ["Frostbite564"],
+    "verifiers": ["Frostbite564", "ashes"],
     "verification": "https://www.youtube.com/watch?v=sfhW97rCkY8",
     "percentToQualify": "100",
     "records": [
-        {
-            "user": "ashes",
-            "link": "https://www.youtube.com/watch?v=sfhW97rCkY8",
-            "percent": 100,
-            "hz": 240
-        }
     ]
 }
 
