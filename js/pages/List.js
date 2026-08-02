@@ -22,20 +22,37 @@ export default {
         </main>
         <main v-else class="page-list">
             <div class="list-container">
-                <table class="list" v-if="list">
-                    <tr v-for="([level, err], i) in list">
+                <!-- Search box -->
+                <div class="list-search">
+                    <input
+                        v-model="searchQuery"
+                        type="search"
+                        placeholder="Search levels, authors, IDs, record users..."
+                        class="search-input"
+                        aria-label="Search list"
+                    />
+                    <button v-if="searchQuery" class="clear-btn" @click="searchQuery = ''">Clear</button>
+                </div>
+
+                <table class="list" v-if="list && filteredList.length">
+                    <tr v-for="({ level, err, origIndex }, i) in filteredList" :key="origIndex">
                         <td class="rank">
-                            <p v-if="i + 1 <= 50" class="type-label-lg">#{{ i + 1 }}</p>
+                            <p v-if="origIndex + 1 <= 50" class="type-label-lg">#{{ origIndex + 1 }}</p>
                             <p v-else class="type-label-lg">Legacy</p>
                         </td>
-                        <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                            <button @click="selected = i">
+                        <td class="level" :class="{ 'active': selected == origIndex, 'error': !level }">
+                            <button @click="selected = origIndex">
                                 <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
                             </button>
                         </td>
                     </tr>
                 </table>
+
+                <div v-else class="no-results" v-if="list">
+                    <p>No results found.</p>
+                </div>
             </div>
+
             <div class="level-container">
                 <div class="level" v-if="level">
                     <h1>{{ level.name }}</h1>
@@ -112,7 +129,7 @@ export default {
                         Have either source audio or clicks/taps in the video. Edited audio only does not count
                     </p>
                     <p>
-                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. Everyplay records are exempt from this
+                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. Everyplay records are exempt f[...]
                     </p>
                     <p>
                         The recording must also show the player hit the endwall, or the completion will be invalidated.
@@ -137,13 +154,19 @@ export default {
         selected: 0,
         errors: [],
         roleIconMap,
-        store
+        store,
+        // search state
+        searchQuery: ''
     }),
     computed: {
+        // Keep level selection based on original list indices.
         level() {
+            if (!this.list || !this.list.length) return null;
+            if (!this.list[this.selected]) return null;
             return this.list[this.selected][0];
         },
         video() {
+            if (!this.level) return "";
             if (!this.level.showcase) {
                 return embed(this.level.verification);
             }
@@ -154,6 +177,49 @@ export default {
                     : this.level.verification
             );
         },
+        // filteredList returns objects so we can preserve original indices
+        filteredList() {
+            if (!this.list) return [];
+            const q = this.searchQuery.trim().toLowerCase();
+            const mapped = this.list.map(([level, err], idx) => ({ level, err, origIndex: idx }));
+
+            if (!q) return mapped;
+
+            return mapped.filter(({ level, err }) => {
+                // if level failed to load, allow searching the error filename
+                if (!level) {
+                    return err && err.toString().toLowerCase().includes(q);
+                }
+
+                // fields to search
+                const fields = [];
+
+                if (level.name) fields.push(level.name);
+                if (level.id !== undefined && level.id !== null) fields.push(String(level.id));
+                if (level.password) fields.push(level.password);
+                if (level.author) {
+                    // author might be a string or object
+                    if (typeof level.author === "string") fields.push(level.author);
+                    else if (level.author.name) fields.push(level.author.name);
+                }
+                if (level.creators && Array.isArray(level.creators)) fields.push(level.creators.join(" "));
+                if (level.verifiers && Array.isArray(level.verifiers)) fields.push(level.verifiers.join(" "));
+                if (level.records && Array.isArray(level.records)) fields.push(level.records.map(r => r.user || "").join(" "));
+
+                return fields.some(f => f && f.toString().toLowerCase().includes(q));
+            });
+        },
+    },
+    watch: {
+        // Keep selection valid when search filters the selected item out
+        filteredList(newList) {
+            if (!newList || !newList.length) return;
+            const stillSelected = newList.some(item => item.origIndex === this.selected);
+            if (!stillSelected) {
+                // set selection to the first filtered item (use its original index)
+                this.selected = newList[0].origIndex;
+            }
+        }
     },
     async mounted() {
         // Hide loading spinner
