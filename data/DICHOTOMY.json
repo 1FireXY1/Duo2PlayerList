@@ -2,16 +2,10 @@
     "id": 103011600,
     "name": "DICHOTOMY",
     "author": "Graydient7",
-    "creators": [],
-    "verifier": "Binary",
+    "creators": ["Graydient7"],
+    "verifier": ["Binary", "Pizazzy"],
     "verification": "https://youtu.be/NtugAmpuitY",
     "percentToQualify": "100",
     "records": [
-        {
-            "user": "Pizazzy",
-            "link": "https://youtu.be/NtugAmpuitY",
-            "percent": 100,
-            "hz": 240
-        }
     ]
 }
