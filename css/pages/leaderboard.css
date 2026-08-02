@@ -30,8 +30,12 @@
 .page-leaderboard .board-container {
     padding-inline: 1rem;
 }
+.page-leaderboard .board {
+    table-layout: auto;
+    display: block;
+    width: 100%;
+}
 .page-leaderboard .search-box {
-  display:flex;
   align-items:center;
   gap:0.5rem;
   background:#fff;
@@ -40,14 +44,17 @@
   border:1px solid rgba(0,0,0,0.06);
   box-shadow: 0 1px 4px rgba(16,24,40,0.04);
 }
-.search-input { border:none; padding:0.45rem 0.5rem; font-size:0.95rem; background:transparent; }
-.clear-btn { background:#f1f5f9; border:none; border-radius:6px; padding:0.25rem 0.5rem; cursor:pointer; }
+.search-input { border:none; padding:0.45rem 0.5rem; font-size:0.95rem; background:transparent;
+}
+.clear-btn { background:#f1f5f9; border:none; border-radius:6px; padding:0.25rem 0.5rem; cursor:pointer;
+}
 .clear-btn:hover { background:#e2e8f0;
 }
-.page-leaderboard .board {
-    table-layout: auto;
-    display: block;
-    width: 100%;
+.page-leaderboard-container.dark .search-box { background:#111827; border-color:rgba(255,255,255,0.06);
+}
+.page-leaderboard-container.dark .search-input { color:#e5e7eb;
+}
+.page-leaderboard-container.dark .clear-btn { background:rgba(255,255,255,0.03); color:#cbd5e1;
 }
 .page-leaderboard .board .rank {
     padding-block: 1rem;
