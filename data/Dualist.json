@@ -3,7 +3,7 @@
     "name": "Dualist",
     "author": "Sync",
     "creators": ["Cluncherp", "Sync", "Twandash"],
-    "verifier": ["theworldofme", "Rqd"],
+    "verifiers": ["theworldofme", "Rqd"],
     "verification": "https://youtu.be/QKiDZIC4Yy4?si=X9LgPQI2iBo6qU-Z",
     "percentToQualify": "100",
     "records": [
