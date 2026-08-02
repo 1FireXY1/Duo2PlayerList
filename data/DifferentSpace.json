@@ -2,17 +2,11 @@
     "id": 96285641,
     "name": "Different Space",
     "author": "DianaGWCB",
-    "creators": [],
-    "verifier": "Smiffy777",
+    "creators": ["DianaGWCB"],
+    "verifier": ["Smiffy777", "Lia"],
     "verification": "https://www.youtube.com/watch?v=nFL6VOGgQMI",
     "percentToQualify": "100",
     "records": [
-        {
-            "user": "Lia",
-            "link": "https://www.youtube.com/watch?v=nFL6VOGgQMI",
-            "percent": 100,
-            "hz": 240
-        }
     ]
 }
 
