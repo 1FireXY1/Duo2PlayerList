@@ -60,7 +60,7 @@ export default {
 
                         <!-- No results row when search is active but nothing matches -->
                         <tr v-if="search && filteredLeaderboard.length === 0">
-                            <td colspan="3" class="no-results">No players match "{{ search }}"</td>
+                            <td colspan="3" class="no-results"></td>
                         </tr>
                     </table>
                 </div>
