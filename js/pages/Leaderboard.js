@@ -28,7 +28,7 @@ export default {
                 <div class="board-container">
                 
                 <!-- SEARCH BAR -->
-                <div class="search-container">
+                <div class="search-container" style="margin-bottom:12px;">
                     <input
                         type="search"
                         v-model="search"
