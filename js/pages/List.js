@@ -23,7 +23,7 @@ export default {
         <main v-else class="page-list">
             <div class="list-container" style="margin-bottom:12px;">
                 <!-- Search box -->
-                <div class="list-search">
+                <div class="list-search" style="margin-bottom:12px;">
                     <input
                         v-model="searchQuery"
                         type="search"
@@ -48,7 +48,7 @@ export default {
                     </tr>
                 </table>
 
-                <div v-else class="no-results" v-if="list">
+                <div v-else class="no-results" v-if="list" style="margin-bottom:12px;">
                     <p>No results found.</p>
                 </div>
             </div>
