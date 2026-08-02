@@ -38,8 +38,8 @@ export default {
                     />
                     <button v-if="search" class="clear-btn" @click="search = ''">Clear</button>
                 </div>
-                <p> e </p>
-                <p> e </p>
+                <p>  </p>
+                <p>  </p>
                     <table class="board">
                         <!-- iterate over filteredLeaderboard instead of leaderboard -->
                         <tr v-for="(ientry, i) in filteredLeaderboard" :key="ientry.user">
