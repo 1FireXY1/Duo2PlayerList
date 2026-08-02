@@ -3,15 +3,9 @@
     "name": "plane map",
     "author": "hauntkami",
     "creators": ["hauntkami", "MaZtiK"],
-    "verifier": "Lia",
+    "verifiers": ["Lia", "Gecko GD"],
     "verification": "https://youtu.be/t1ype-gSFEI?si=fL6GOd8dI1XlKg2a",
     "percentToQualify": "100",
     "records": [
-        {
-            "user": "Gecko GD",
-            "link": "https://youtu.be/t1ype-gSFEI?si=fL6GOd8dI1XlKg2a",
-            "percent": 100,
-            "hz": 480
-        }
     ]
 }
