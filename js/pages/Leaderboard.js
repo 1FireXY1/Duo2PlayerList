@@ -28,7 +28,7 @@ export default {
                 <div class="board-container">
                 
                 <!-- SEARCH BAR -->
-                <div class="search-container" style="margin-bottom:12px;">
+                <div class="search-container" style="margin-bottom:12px; align-items:center; gap:0.5rem; background-color: var(--color-primary); padding: 0.5rem; border-radius: 0.5rem; border:1px solid rgba(0,0,0,0.06); box-shadow: 0 1px 0.5rem 0 rgba(0, 0, 102, 0.5); transition: transform 100ms ease;">
                     <input
                         type="search"
                         v-model="search"
