@@ -2,16 +2,10 @@
     "id": 106074128,
     "name": "In Synergy",
     "author": "Texic",
-    "creators": [],
-    "verifier": "Texic",
+    "creators": ["Texic"],
+    "verifier": ["Texic", "Kicek"],
     "verification": "https://youtu.be/QnvkuQI54Z8?si=46r_liAFlsUPi05_",
     "percentToQualify": "100",
     "records": [
-        {
-            "user": "Kicek",
-            "link": "https://youtu.be/QnvkuQI54Z8?si=46r_liAFlsUPi05_",
-            "percent": 100,
-            "hz": 240
-        }
     ]
 }
