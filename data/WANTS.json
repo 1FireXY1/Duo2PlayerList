@@ -3,16 +3,10 @@
     "name": "We Are Not The Same",
     "author": "mbed",
     "creators": ["SpKale", "mbed"],
-    "verifier": "mbed",
+    "verifier": ["mbed", "SpKale"],
     "verification": "https://youtu.be/iFbiMw0GVzI?si=MIDX4xzkpJFlS_Hc",
     "percentToQualify": "100",
     "records": [
-        {
-            "user": "SpKale",
-            "link": "https://youtu.be/iFbiMw0GVzI?si=MIDX4xzkpJFlS_Hc",
-            "percent": 100,
-            "hz": 240
-        },
         {
             "user": "Draconyx",
             "link": "https://www.youtube.com/watch?v=B__ZdcMpTxc",
