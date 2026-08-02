@@ -2,17 +2,11 @@
     "id": 91042484,
     "name": "Sides Of My Mind",
     "author": "MaxxoRMeN",
-    "creators": [],
-    "verifier": "TheyCallMeEvan",
+    "creators": ["MaxxoRMeN"],
+    "verifier": ["TheyCallMeEvan", "Polyatomic"],
     "verification": "https://youtu.be/RHU27eLFZl4?si=HjKLu_5qYCEe2R3Q",
     "percentToQualify": "100",
     "records": [
-        {
-            "user": "Polyatomic",
-            "link": "https://youtu.be/RHU27eLFZl4?si=HjKLu_5qYCEe2R3Q",
-            "percent": 100,
-            "hz": 240
-        },
         {
             "user": "Draconyx",
             "link": "https://www.youtube.com/live/TKKVwXCGJqM?si=I0D395ssjfKIdhAo&t=430",
