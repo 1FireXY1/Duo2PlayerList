@@ -136,27 +136,3 @@
 .page-list .meta .editors li a:hover {
     text-decoration: underline;
 }
-.search {
-    border-radius: 14px;
-    border: 2px solid var(--color-background-hover);
-    width: 90%;
-    max-width: 22em;
-    height: 40px;
-    padding-left: 10px;
-    background-color: var(--color-background-hover);
-    transition: all, border 120ms ease-out;
-    position: relative;
-}
-.clear-search {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-89%) translateX(-35%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 1rem;
-    font-size: 1.2rem;
-    opacity: 40%;
-    color: var(--color-on-background);
-}
