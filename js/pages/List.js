@@ -27,8 +27,8 @@ export default {
                     <input
                         type="search"
                         v-model="search"
-                        placeholder="Search levels, authors, or IDs..."
-                        aria-label="Search list"
+                        placeholder="Search..."
+                        aria-label="Search"
                         class="search-input"
                     />
                     <button v-if="search" class="clear-btn" @click="search = ''">Clear</button>
