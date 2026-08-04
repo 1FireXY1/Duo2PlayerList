@@ -21,7 +21,7 @@
 }
 .page-list.dark .search-input { color: var(--color-on-primary);
 }
-.page-list.dark .clear-btn { background:rgba(255,255,255,0.03); color:#cbd5e;
+.page-list.dark .clear-btn { background:rgba(255,255,255,0.03); color:#cbd5e1;
 }
 .page-list .list .rank {
     text-align: end;
