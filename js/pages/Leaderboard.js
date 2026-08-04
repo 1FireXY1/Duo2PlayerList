@@ -32,8 +32,8 @@ export default {
                     <input
                         type="search"
                         v-model="search"
-                        placeholder="Search players..."
-                        aria-label="Search players"
+                        placeholder="Search..."
+                        aria-label="Search"
                         class="search-input"
                     />
                     <button v-if="search" class="clear-btn" @click="search = ''">Clear</button>
