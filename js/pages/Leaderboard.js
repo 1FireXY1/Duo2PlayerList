@@ -42,7 +42,7 @@ export default {
                         <!-- iterate over filteredLeaderboard instead of leaderboard -->
                         <tr v-for="(ientry, i) in filteredLeaderboard" :key="ientry.user">
                             <td class="rank">
-                                <p class="type-label-lg">#{{ i + 1 }}</p>
+                                <p class="type-label-lg">#{{ ientry.rank }}</p>
                             </td>
                             <td class="total">
                                 <p class="type-label-lg">{{ localize(ientry.total) }}</p>
@@ -64,7 +64,7 @@ export default {
                 <!-- Player details shown only when there are results -->
                 <div class="player-container" v-if="filteredLeaderboard.length > 0">
                     <div class="player">
-                        <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
+                        <h1>#{{ entry.rank }} {{ entry.user }}</h1>
                         <h3>{{ entry.total }}</h3>
                         <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
                         <table class="table">
@@ -139,6 +139,7 @@ export default {
                     verified: [],
                     completed: [],
                     progressed: [],
+                    rank: 0,
                 }
             );
         },
@@ -155,7 +156,8 @@ export default {
     },
     async mounted() {
         const [leaderboard, err] = await fetchLeaderboard();
-        this.leaderboard = leaderboard;
+        // assign a fixed rank to each player based on the initial order
+        this.leaderboard = leaderboard.map((e, idx) => ({ ...e, rank: idx + 1 }));
         this.err = err;
         // Hide loading spinner
         this.loading = false;
