@@ -21,7 +21,7 @@ export default {
             <Spinner></Spinner>
         </main>
         <main v-else class="page-list">
-            <div class="list-container" style="margin-bottom:12px;">
+            <div class="list-container">
                 <!-- Search box -->
                 <div class="list-search" style="margin-bottom:12px;">
                     <input
