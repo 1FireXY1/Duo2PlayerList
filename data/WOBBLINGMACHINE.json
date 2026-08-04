@@ -9,6 +9,18 @@
     "percentToQualify": "100",
     "records": [
         {
+            "user": "Draconyx",
+            "link": "https://www.youtube.com/watch?v=i3eC6ioGiA4",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "FireXY",
+            "link": "https://www.youtube.com/watch?v=i3eC6ioGiA4",
+            "percent": 100,
+            "hz": 240
+        },
+        {
             "user": "Lia",
             "link": "https://youtu.be/CvgcIksikec",
             "percent": 100,
@@ -16,7 +28,7 @@
         },
         {
             "user": "Gecko GD",
-            "link": "https://youtu.be/CvgcIksikec",
+            "link": "https://youtu.be/2qMzsukx4io",
             "percent": 100,
             "hz": 240
         },
@@ -41,18 +53,6 @@
         {
             "user": "Slaughter",
             "link": "https://youtu.be/_Xk6scnf5to?si=i0uFx_lMfgwCA3zX&t=491",
-            "percent": 100,
-            "hz": 240
-        },
-        {
-            "user": "Draconyx",
-            "link": "https://www.youtube.com/watch?v=i3eC6ioGiA4",
-            "percent": 100,
-            "hz": 240
-        },
-        {
-            "user": "FireXY",
-            "link": "https://www.youtube.com/watch?v=i3eC6ioGiA4",
             "percent": 100,
             "hz": 240
         }
