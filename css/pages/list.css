@@ -1,3 +1,15 @@
+.page-list-container.dark button.clear-btn,
+.page-list-container.dark .clear-search {
+  background-color: rgba(255,255,255,0.03);
+  color: #cbd5e1;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.page-list-container.dark button.clear-btn:hover,
+.page-list-container.dark .clear-search:hover {
+  background-color: rgba(255,255,255,0.06);
+}
 .page-list .list-container,
 .page-list .level-container,
 .page-list .meta-container {
