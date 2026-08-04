@@ -4,7 +4,6 @@ import { score } from "../score.js";
 import { fetchEditors, fetchList } from "../content.js";
 
 import Spinner from "../components/Spinner.js";
-import "../../css/components/animations.css";
 import LevelAuthors from "../components/List/LevelAuthors.js";
 
 const roleIconMap = {
