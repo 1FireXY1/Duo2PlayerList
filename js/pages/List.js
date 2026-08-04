@@ -152,6 +152,9 @@ export default {
                         You must achieve your record with the ID listed on the site. If it is a Globed copy, there is another separate ID listed that you must use.
                     </p>
                     <p>
+                        If there is not a Globed copy listed and you'd like to add one, please let us know on Discord in our list support form.
+                    </p>
+                    <p>
                         Custom copies are only allowed as long as they are previously approved by list moderators. If you use a Globed copy listed on this site, you don't have to worry about approval as they are already approved.
                     </p>
                     <p>
