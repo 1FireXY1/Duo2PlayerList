@@ -23,15 +23,15 @@ export default {
         <main v-else class="page-list">
             <div class="list-container">
                 <!-- Search box -->
-                <div class="list-search" style="margin-bottom:12px;">
+                <div class="search-container" style="margin-bottom:12px;">
                     <input
-                        v-model="searchQuery"
                         type="search"
-                        placeholder="Search levels, authors, IDs, record users..."
-                        class="search-input"
+                        v-model="search"
+                        placeholder="Search levels, authors, or IDs..."
                         aria-label="Search list"
+                        class="search-input"
                     />
-                    <button v-if="searchQuery" class="clear-btn" @click="searchQuery = ''">Clear</button>
+                    <button v-if="search" class="clear-btn" @click="search = ''">Clear</button>
                 </div>
 
                 <table class="list" v-if="list && filteredList.length">
@@ -156,7 +156,7 @@ export default {
         roleIconMap,
         store,
         // search state
-        searchQuery: ''
+        search: ''
     }),
     computed: {
         // Keep level selection based on original list indices.
@@ -180,7 +180,7 @@ export default {
         // filteredList returns objects so we can preserve original indices
         filteredList() {
             if (!this.list) return [];
-            const q = this.searchQuery.trim().toLowerCase();
+            const q = this.search.trim().toLowerCase();
             const mapped = this.list.map(([level, err], idx) => ({ level, err, origIndex: idx }));
 
             if (!q) return mapped;
