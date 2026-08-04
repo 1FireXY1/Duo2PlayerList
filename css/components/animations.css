@@ -11,26 +11,30 @@
 .level-transition-enter-from,
 .level-transition-appear-from {
   opacity: 0;
-  transform: translateX(18px) scale(0.995);
+  filter: blur(5px);
+  transform: scale(0.95);
 }
 
 /* End state when entering */
 .level-transition-enter-to,
 .level-transition-appear-to {
   opacity: 1;
+  filter: blur(0px);
   transform: translateX(0) scale(1);
 }
 
 /* Start state when leaving */
 .level-transition-leave-from {
   opacity: 1;
+  filter: blur(0px);
   transform: translateX(0) scale(1);
 }
 
 /* End state when leaving */
 .level-transition-leave-to {
   opacity: 0;
-  transform: translateX(-12px) scale(0.995);
+  filter: blur(5px);
+  transform: scale(0.95);
 }
 
 /* Optional: ensure the inner .level layout doesn't jump */
