@@ -63,60 +63,66 @@ export default {
 
                 <!-- Player details shown only when there are results -->
                 <div class="player-container" v-if="filteredLeaderboard.length > 0">
-                    <div class="player">
-                        <h1>#{{ entry.rank }} {{ entry.user }}</h1>
-                        <h3>{{ entry.total }}</h3>
-                        <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
-                        <table class="table">
-                            <tr v-for="score in entry.verified">
-                                <td class="rank">
-                                    <p>#{{ score.rank }}</p>
-                                </td>
-                                <td class="level">
-                                    <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
-                                </td>
-                                <td class="score">
-                                    <p>+{{ localize(score.score) }}</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <h2 v-if="entry.completed.length > 0">Completed ({{ entry.completed.length }})</h2>
-                        <table class="table">
-                            <tr v-for="score in entry.completed">
-                                <td class="rank">
-                                    <p>#{{ score.rank }}</p>
-                                </td>
-                                <td class="level">
-                                    <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
-                                </td>
-                                <td class="score">
-                                    <p>+{{ localize(score.score) }}</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <h2 v-if="entry.progressed.length > 0">Progressed ({{entry.progressed.length}})</h2>
-                        <table class="table">
-                            <tr v-for="score in entry.progressed">
-                                <td class="rank">
-                                    <p>#{{ score.rank }}</p>
-                                </td>
-                                <td class="level">
-                                    <a class="type-label-lg" target="_blank" :href="score.link">{{ score.percent }}% {{ score.level }}</a>
-                                </td>
-                                <td class="score">
-                                    <p>+{{ localize(score.score) }}</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <!-- Transition wrapper: appear so it runs on initial mount too; key by selected so Vue replaces node on selection changes -->
+                    <transition name="level-transition" mode="out-in" appear>
+                        <div class="player" :key="selected">
+                            <h1>#{{ entry.rank }} {{ entry.user }}</h1>
+                            <h3>{{ entry.total }}</h3>
+                            <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
+                            <table class="table">
+                                <tr v-for="score in entry.verified">
+                                    <td class="rank">
+                                        <p>#{{ score.rank }}</p>
+                                    </td>
+                                    <td class="level">
+                                        <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
+                                    </td>
+                                    <td class="score">
+                                        <p>+{{ localize(score.score) }}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <h2 v-if="entry.completed.length > 0">Completed ({{ entry.completed.length }})</h2>
+                            <table class="table">
+                                <tr v-for="score in entry.completed">
+                                    <td class="rank">
+                                        <p>#{{ score.rank }}</p>
+                                    </td>
+                                    <td class="level">
+                                        <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
+                                    </td>
+                                    <td class="score">
+                                        <p>+{{ localize(score.score) }}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <h2 v-if="entry.progressed.length > 0">Progressed ({{entry.progressed.length}})</h2>
+                            <table class="table">
+                                <tr v-for="score in entry.progressed">
+                                    <td class="rank">
+                                        <p>#{{ score.rank }}</p>
+                                    </td>
+                                    <td class="level">
+                                        <a class="type-label-lg" target="_blank" :href="score.link">{{ score.percent }}% {{ score.level }}</a>
+                                    </td>
+                                    <td class="score">
+                                        <p>+{{ localize(score.score) }}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </transition>
                 </div>
 
                 <!-- Message when search produced no results -->
                 <div class="player-container" v-else>
-                    <div class="player" style="height: 100%; justify-content: center; align-items: center;">
-                        <p v-if="search">No players match "{{ search }}"</p>
-                        <p v-else>(ノಠ益ಠ)ノ彡┻━┻</p>
-                    </div>
+                    <transition name="level-transition" mode="out-in" appear>
+                        <div class="player" style="height: 100%; justify-content: center; align-items: center;" :key="'no-player-'+selected">
+                            <p v-if="search">No players match "{{ search }}"</p>
+                            <p v-else>(ノಠ益ಠ)ノ彡┻━┻</p>
+                        </div>
+                    </transition>
                 </div>
             </div>
         </main>
