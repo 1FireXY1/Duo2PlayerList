@@ -115,33 +115,49 @@ export default {
                             </li>
                         </ol>
                     </template>
+                    <h3>Placement Requirements</h3>
+                    <p>
+                        For a level to be placed on the list, at least 35% of the level's gameplay must be 2P dual. This does NOT count completely symmetrical gameplay, simultaneous clicks, or mini-games.
+                    </p>
+                    <p>
+                        2P levels that were intended to be solo must have the 2P parts contain most of the difficulty of the level. These levels also apply to the rules above.
+                    </p>
+                    <p>
+                        Levels will be placed based on community difficulty opinions. If you'd like to add your own opinion on placements, please send them in our Discord server.
+                    </p>
+                    <p>
+                        If an unrated level is deemed to be of rate-worthy quality, it may also be added to the list. This is done by community vote.
+                    </p>
                     <h3>Submission Requirements</h3>
                     <p>
-                        To be added, example below
+                        Your record must be done with two or more people. This means that solo records will NOT be accepted. There is a list named the 2PLL, go there to submit such records.
                     </p>
                     <p>
-                        Achieved the record without using hacks (however, FPS bypass is allowed, up to 360fps)
+                        If you already have a completion accepted on AREDL, let us know in our Discord server and we can add the corresponding record to our list.
                     </p>
                     <p>
-                        Achieved the record on the level that is listed on the site - please check the level ID before you submit a record
+                        You must have a green cheat indicator visible during your completion as well as during the endscreen.
                     </p>
                     <p>
-                        Have either source audio or clicks/taps in the video. Edited audio only does not count
+                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. If it is first attempt, please add footage from before pressing the play button.
                     </p>
                     <p>
-                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. Everyplay records are exempt f[...]
+                        Any levels placed #51 and below are on the legacy list. We will accept records on levels for 24 hours after they fall off the top #50. After this time is up, submissions for said levels will be closed and not accepted further.
                     </p>
                     <p>
-                        The recording must also show the player hit the endwall, or the completion will be invalidated.
+                        You must achieve your record with the ID listed on the site. If it is a Globed copy, there is another separate ID listed that you must use.
                     </p>
                     <p>
-                        Do not use secret routes or bug routes
+                        Custom copies are only allowed as long as they are previously approved by list moderators. If you use a Globed copy listed on this site, you don't have to worry about approval as they are already approved.
                     </p>
                     <p>
-                        Do not use easy modes, only a record of the unmodified level qualifies
+                        The recording must show the endscreen in its entirety. This means stars gained (unless it is not on the official copy) as well as the cheat indicator.
                     </p>
                     <p>
-                        Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level
+                        Each record requires clicks to be audible throughout the entire completion.
+                    </p>
+                    <p>
+                        You may not utilize secret ways or bugged routes.
                     </p>
                 </div>
             </div>
