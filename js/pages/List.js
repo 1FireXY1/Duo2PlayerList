@@ -20,9 +20,9 @@ export default {
         <main v-if="loading">
             <Spinner></Spinner>
         </main>
-        <main v-else class="page-list">
+        <main v-else class="page-list-container">
             <div class="list-container">
-                <!-- Search box -->
+                <!-- SEARCH BOX -->
                 <div class="search-container" style="margin-bottom:12px;">
                     <input
                         type="search"
