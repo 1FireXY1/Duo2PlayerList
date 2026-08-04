@@ -1,0 +1,40 @@
+/* Level panel slide + fade animation */
+.level-transition-enter-active,
+.level-transition-leave-active,
+.level-transition-appear-active {
+  transition: opacity 300ms cubic-bezier(.2,.9,.2,1), transform 300ms cubic-bezier(.2,.9,.2,1);
+  /* Make sure elements can be positioned during animation */
+  will-change: opacity, transform;
+}
+
+/* Start state when entering / appearing */
+.level-transition-enter-from,
+.level-transition-appear-from {
+  opacity: 0;
+  transform: translateX(18px) scale(0.995);
+}
+
+/* End state when entering */
+.level-transition-enter-to,
+.level-transition-appear-to {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* Start state when leaving */
+.level-transition-leave-from {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* End state when leaving */
+.level-transition-leave-to {
+  opacity: 0;
+  transform: translateX(-12px) scale(0.995);
+}
+
+/* Optional: ensure the inner .level layout doesn't jump */
+.level {
+  /* Keep transitions smooth */
+  backface-visibility: hidden;
+}
