@@ -9,6 +9,30 @@
     "percentToQualify": "100",
     "records": [
         {
+            "user": "HotNooB",
+            "link": "https://www.youtube.com/watch?v=U5I0WlAocOU",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "Fantastic G",
+            "link": "https://www.youtube.com/watch?v=U5I0WlAocOU",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "Laser",
+            "link": "https://youtu.be/_Xk6scnf5to?si=i0uFx_lMfgwCA3zX&t=491",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Slaughter",
+            "link": "https://youtu.be/_Xk6scnf5to?si=i0uFx_lMfgwCA3zX&t=491",
+            "percent": 100,
+            "hz": 240
+        },
+        {
             "user": "Draconyx",
             "link": "https://www.youtube.com/watch?v=i3eC6ioGiA4",
             "percent": 100,
