@@ -17,11 +17,11 @@
 }
 .clear-btn:hover { background:#e2e8f0;
 }
-.page-list-container.dark .search-box { background: var(--color-on-primary); border-color:rgba(255,255,255,0.06);
+.page-list.dark .search-box { background: var(--color-on-primary); border-color:rgba(255,255,255,0.06);
 }
-.page-list-container.dark .search-input { color: var(--color-on-primary);
+.page-list.dark .search-input { color: var(--color-on-primary);
 }
-.page-list-container.dark .clear-btn { background:rgba(255,255,255,0.03); color:#cbd5e;
+.page-list.dark .clear-btn { background:rgba(255,255,255,0.03); color:#cbd5e;
 }
 .page-list .list .rank {
     text-align: end;
