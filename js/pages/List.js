@@ -4,6 +4,7 @@ import { score } from "../score.js";
 import { fetchEditors, fetchList } from "../content.js";
 
 import Spinner from "../components/Spinner.js";
+import "../css/animations.css";
 import LevelAuthors from "../components/List/LevelAuthors.js";
 
 const roleIconMap = {
@@ -13,91 +14,96 @@ const roleIconMap = {
     dev: "code",
     trial: "user-lock",
 };
-
 export default {
-    components: { Spinner, LevelAuthors },
-    template: `
-        <main v-if="loading">
-            <Spinner></Spinner>
-        </main>
-        <main v-else class="page-list">
-            <div class="list-container">
-                <!-- SEARCH BOX -->
-                <div class="search-container" style="margin-bottom:12px;">
-                    <input
-                        type="search"
-                        v-model="search"
-                        placeholder="Search..."
-                        aria-label="Search"
-                        class="search-input"
-                    />
-                    <button v-if="search" class="clear-btn" @click="search = ''">Clear</button>
-                </div>
+  components: { Spinner, LevelAuthors },
+  template: `
+    <main v-if="loading">
+      <Spinner></Spinner>
+    </main>
+    <main v-else class="page-list">
+      <div class="list-container">
+        <!-- SEARCH BOX -->
+        <div class="search-container" style="margin-bottom:12px;">
+          <input
+            type="search"
+            v-model="search"
+            placeholder="Search..."
+            aria-label="Search"
+            class="search-input"
+          />
+          <button v-if="search" class="clear-btn" @click="search = ''">Clear</button>
+        </div>
 
-                <table class="list" v-if="list && filteredList.length">
-                    <tr v-for="({ level, err, origIndex }, i) in filteredList" :key="origIndex">
-                        <td class="rank">
-                            <p v-if="origIndex + 1 <= 50" class="type-label-lg">#{{ origIndex + 1 }}</p>
-                            <p v-else class="type-label-lg">Legacy</p>
-                        </td>
-                        <td class="level" :class="{ 'active': selected == origIndex, 'error': !level }">
-                            <button @click="selected = origIndex">
-                                <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
-                            </button>
-                        </td>
-                    </tr>
-                </table>
+        <table class="list" v-if="list && filteredList.length">
+          <tr v-for="({ level, err, origIndex }, i) in filteredList" :key="origIndex">
+            <td class="rank">
+              <p v-if="origIndex + 1 <= 50" class="type-label-lg">#{{ origIndex + 1 }}</p>
+              <p v-else class="type-label-lg">Legacy</p>
+            </td>
+            <td class="level" :class="{ 'active': selected == origIndex, 'error': !level }">
+              <button @click="selected = origIndex">
+                <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
+              </button>
+            </td>
+          </tr>
+        </table>
 
-                <div v-else class="no-results" v-if="list" style="margin-bottom:12px;">
-                    <p>No results found.</p>
-                </div>
-            </div>
+        <div v-else class="no-results" v-if="list" style="margin-bottom:12px;">
+          <p>No results found.</p>
+        </div>
+      </div>
 
-            <div class="level-container">
-                <div class="level" v-if="level">
-                    <h1>{{ level.name }}</h1>
-                    <LevelAuthors :author="level.author" :creators="level.creators" :verifiers="level.verifiers"></LevelAuthors>
-                    <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
-                    <ul class="stats">
-                        <li>
-                            <div class="type-title-sm">Points when completed</div>
-                            <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
-                        </li>
-                        <li>
-                            <div class="type-title-sm">ID</div>
-                            <p>{{ level.id }}</p>
-                        </li>
-                        <li>
-                            <div class="type-title-sm">Globed</div>
-                            <p>{{ level.globed }}</p>
-                        </li>
-                    </ul>
-                    <h2>Records</h2>
-                    <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
-                    <p v-else-if="selected +1 <= 45"><strong>100%</strong> or better to qualify</p>
-                    <p v-else>This level does not accept new records.</p>
-                    <table class="records">
-                        <tr v-for="record in level.records" class="record">
-                            <td class="percent">
-                                <p>{{ record.percent }}%</p>
-                            </td>
-                            <td class="user">
-                                <a :href="record.link" target="_blank" class="type-label-lg">{{ record.user }}</a>
-                            </td>
-                            <td class="mobile">
-                                <img v-if="record.mobile" :src="\`/assets/phone-landscape\${store.dark ? '-dark' : ''}.svg\`" alt="Mobile">
-                            </td>
-                            <td class="hz">
-                                <p>{{ record.hz }}Hz</p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div v-else class="level" style="height: 100%; justify-content: center; align-items: center;">
-                    <p>(ノಠ益ಠ)ノ彡┻━┻</p>
-                </div>
-            </div>
-            <div class="meta-container">
+      <div class="level-container">
+        <!-- TRANSITION WRAPPER: Appear so it runs on initial mount too -->
+        <transition name="level-transition" mode="out-in" appear>
+          <!-- key by selected so Vue replaces this node on selection changes -->
+          <div class="level" v-if="level" :key="selected">
+            <h1>{{ level.name }}</h1>
+            <LevelAuthors :author="level.author" :creators="level.creators" :verifiers="level.verifiers"></LevelAuthors>
+            <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
+            <ul class="stats">
+              <li>
+                <div class="type-title-sm">Points when completed</div>
+                <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
+              </li>
+              <li>
+                <div class="type-title-sm">ID</div>
+                <p>{{ level.id }}</p>
+              </li>
+              <li>
+                <div class="type-title-sm">Globed</div>
+                <p>{{ level.globed }}</p>
+              </li>
+            </ul>
+            <h2>Records</h2>
+            <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
+            <p v-else-if="selected +1 <= 45"><strong>100%</strong> or better to qualify</p>
+            <p v-else>This level does not accept new records.</p>
+            <table class="records">
+              <tr v-for="record in level.records" class="record">
+                <td class="percent">
+                  <p>{{ record.percent }}%</p>
+                </td>
+                <td class="user">
+                  <a :href="record.link" target="_blank" class="type-label-lg">{{ record.user }}</a>
+                </td>
+                <td class="mobile">
+                  <img v-if="record.mobile" :src="\`/assets/phone-landscape\${store.dark ? '-dark' : ''}.svg\`" alt="Mobile">
+                </td>
+                <td class="hz">
+                  <p>{{ record.hz }}Hz</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Fallback empty-state also keyed so it animates in/out -->
+          <div class="level" v-else style="height: 100%; justify-content: center; align-items: center;" :key="'no-level-'+selected">
+            <p>(ノಠ益ಠ)ノ彡┻━┻</p>
+          </div>
+        </transition>
+      </div>
+      <div class="meta-container">
                 <div class="meta">
                     <div class="errors" v-show="errors.length > 0">
                         <p class="error" v-for="error of errors">{{ error }}</p>
