@@ -118,7 +118,7 @@ header .nav a::after {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 10;                       /* Adjust if you want the line farther below */
+    bottom: -5;                       /* Adjust if you want the line farther below */
     height: 6px;                     /* Thickness of the line */
     background: var(--color-on-primary), var(--color-primary));
     transform-origin: center;
