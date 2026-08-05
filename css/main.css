@@ -126,7 +126,7 @@ header .nav a::after {
     right: 0;
     bottom: -5px;                       /* Adjust if you want the line farther below */
     height: 3px;                     /* Thickness of the line */
-    background: var(--color-primary);
+    background: var(--color-on-primary);
     transform-origin: center;
     transform: scaleX(0);
     transition: transform 220ms cubic-bezier(.2, .8, .2, 1);
