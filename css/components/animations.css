@@ -42,3 +42,36 @@
   /* Keep transitions smooth */
   backface-visibility: hidden;
 }
+
+
+/* Animations for navigation tabs */
+.nav-transition-enter-active,
+.nav-transition-leave-active {
+    transition: opacity 300ms cubic-bezier(.2,.9,.2,1), transform 300ms cubic-bezier(.2,.9,.2,1);
+    /* Make sure elements can be positioned during animation */
+    will-change: opacity, transform;
+}
+
+/* Start state when entering */
+.nav-transition-enter-from {
+  opacity: 0;
+  transform: scale(0, 1);
+}
+
+/* End state when entering */
+.nav-transition-enter-to {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+/* Start state when leaving */
+.nav-transition-leave-from {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+/* End state when leaving */
+.nav-transition-leave-to {
+  opacity: 0;
+  transform: scale(0, 1);
+}
