@@ -118,9 +118,9 @@ header .nav a::after {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;                       /* Adjust if you want the line farther below */
-    height: 3px;                     /* Thickness of the line */
-    background: linear-gradient(90deg, var(--color-on-primary), var(--color-primary));
+    bottom: 10;                       /* Adjust if you want the line farther below */
+    height: 6px;                     /* Thickness of the line */
+    background: var(--color-on-primary), var(--color-primary));
     transform-origin: center;
     transform: scaleX(0);
     transition: transform 220ms cubic-bezier(.2, .8, .2, 1);
@@ -129,9 +129,8 @@ header .nav a::after {
 
 /* Reveal on hover, focus, or for the active tab (aria-current used for accessibility) */
 header .nav a:hover::after,
-header .nav a:focus::after,
-header .nav a[aria-current="page"]::after {
-    transform: scaleX(1);
+header .nav a:focus::after, {
+    transform: scaleX(2);
 }
 
 /* Keyboard focus styling — keep it visible and accessible */
