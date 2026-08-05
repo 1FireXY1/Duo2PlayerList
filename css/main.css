@@ -129,7 +129,8 @@ header .nav a::after {
 
 /* Reveal on hover, focus, or for the active tab (aria-current used for accessibility) */
 header .nav a:hover::after,
-header .nav a:focus::after, {
+header .nav a:focus::after, 
+header .nav a[aria-current="page"]::after {
     transform: scaleX(1);
 }
 
