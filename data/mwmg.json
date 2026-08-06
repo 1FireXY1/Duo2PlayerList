@@ -9,6 +9,18 @@
     "percentToQualify": "100",
     "records": [
         {
+            "user": "Lia",
+            "link": "https://youtu.be/V5togNDHraM",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "Gecko GD",
+            "link": "https://youtu.be/V5togNDHraM",
+            "percent": 100,
+            "hz": 480
+        },
+        {
             "user": "Draconyx",
             "link": "https://www.youtube.com/watch?v=K-h47qVa3mM",
             "percent": 100,
