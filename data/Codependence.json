@@ -7,7 +7,7 @@
     "verifiers": ["Kapinapi", "ViralDL"],
     "verification": "https://youtu.be/zxOuEzL6HXE?si=fIgcGa_bG_HZ08an",
     "percentToQualify": "100",
-    "records": [
+    "records": [   
         {
             "user": "Draconyx",
             "link": "https://www.youtube.com/watch?v=XK3SfmbZ0lQ",
@@ -19,6 +19,18 @@
             "link": "https://www.youtube.com/watch?v=XK3SfmbZ0lQ",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Lia",
+            "link": "https://www.youtube.com/watch?v=5qGzq5UXcrs",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "Gecko GD",
+            "link": "https://www.youtube.com/watch?v=5qGzq5UXcrs",
+            "percent": 100,
+            "hz": 480
         }
     ]
 }
