@@ -7,5 +7,17 @@
     "verification": "https://youtu.be/1u-bXdwjjSg?si=WeRfZWlC1Hmz3pIg",
     "percentToQualify": "100",
     "records": [
+        {
+            "user": "Lia",
+            "link": "https://www.youtube.com/watch?v=yo21OH2AwAM",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "Gecko GD",
+            "link": "https://www.youtube.com/watch?v=yo21OH2AwAM",
+            "percent": 100,
+            "hz": 480
+        }
     ]
 }
