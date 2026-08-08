@@ -7,5 +7,17 @@
     "verification": "https://youtu.be/QnvkuQI54Z8?si=46r_liAFlsUPi05_",
     "percentToQualify": "100",
     "records": [
+        {
+            "user": "Draconyx",
+            "link": "https://youtu.be/z4bDQQVGXWg&t=465",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "FireXY",
+            "link": "https://youtu.be/z4bDQQVGXWg&t=465",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
