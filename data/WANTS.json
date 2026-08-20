@@ -9,6 +9,18 @@
     "percentToQualify": "100",
     "records": [
         {
+            "user": "Dartlolz",
+            "link": "https://www.youtube.com/watch?v=1JG30he7j4o",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "Aphelix",
+            "link": "https://www.youtube.com/watch?v=1JG30he7j4o",
+            "percent": 100,
+            "hz": 480
+        },
+        {
             "user": "Lia",
             "link": "https://www.youtube.com/watch?v=Qn6NfqrcXZI",
             "percent": 100,
