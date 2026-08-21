@@ -8,6 +8,18 @@
     "percentToQualify": "100",
     "records": [
         {
+            "user": "Smiffy777",
+            "link": "https://www.youtube.com/watch?v=J5_IKtax2l8",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Lia",
+            "link": "https://www.youtube.com/watch?v=J5_IKtax2l8",
+            "percent": 100,
+            "hz": 240
+        },
+        {
             "user": "Draconyx",
             "link": "https://youtu.be/z4bDQQVGXWg&t=175",
             "percent": 100,
