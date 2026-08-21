@@ -3,7 +3,7 @@
     "name": "Mission U",
     "author": "MattyS28",
     "creators": ["mbed"],
-    "verifiers": ["Smiffy777", "Gecko GD"],
+    "verifiers": ["Smiffy777", "Gecko"],
     "verification": "https://youtu.be/A2xGTCZ1h3g",
     "percentToQualify": "100",
     "records": [
