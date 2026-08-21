@@ -7,5 +7,17 @@
     "verification": "https://youtu.be/AR9HPd1Qa_Q?si=LBRrCOOHjC_XRLRL",
     "percentToQualify": "100",
     "records": [
+        {
+            "user": "Smiffy777",
+            "link": "https://www.youtube.com/watch?v=M42DI4pJLbc",
+            "percent": 100,
+            "hz": 360
+        },
+        {
+            "user": "Lia",
+            "link": "https://www.youtube.com/watch?v=M42DI4pJLbc",
+            "percent": 100,
+            "hz": 360
+        }
     ]
 }
