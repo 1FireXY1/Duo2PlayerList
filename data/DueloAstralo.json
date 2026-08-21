@@ -3,9 +3,21 @@
     "name": "Duelo Astralo",
     "author": "Astrala",
     "creators": ["Astrala"],
-    "verifiers": ["Smiffy777", "Lia"],
-    "verification": "https://youtu.be/KhpRkHV3uQ0",
+    "verifiers": ["RStuff", "Error"],
+    "verification": "https://youtu.be/FYHm6SG_WiU",
     "percentToQualify": "100",
     "records": [
+        {
+            "user": "Smiffy777",
+            "link": "https://youtu.be/KhpRkHV3uQ0",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Lia",
+            "link": "https://youtu.be/KhpRkHV3uQ0",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
