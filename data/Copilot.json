@@ -8,6 +8,12 @@
     "percentToQualify": "100",
     "records": [
         {
+            "user": "Gecko",
+            "link": "https://www.youtube.com/watch?v=IaaZrL7HzZM",
+            "percent": 100,
+            "hz": 480
+        },
+        {
             "user": "Smiffy777",
             "link": "https://www.youtube.com/watch?v=UjyzoyQavfI",
             "percent": 100,
