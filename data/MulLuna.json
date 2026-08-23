@@ -30,6 +30,12 @@
             "link": "https://www.youtube.com/watch?v=Mo8Z4whnEjw",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Gecko",
+            "link": "https://www.youtube.com/watch?v=SRMG5V3NwOI",
+            "percent": 100,
+            "hz": 480
         }
     ]
 }
