@@ -7,6 +7,12 @@
     "verification": "https://www.youtube.com/watch?v=nFL6VOGgQMI",
     "percentToQualify": "100",
     "records": [
+        {
+            "user": "Gecko",
+            "link": "https://www.youtube.com/watch?v=SRMG5V3NwOI",
+            "percent": 100,
+            "hz": 480
+        }
     ]
 }
 
