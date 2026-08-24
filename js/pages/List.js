@@ -147,7 +147,7 @@ export default {
                         The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. If it is first attempt, please add footage from before pressing the play button.
                     </p>
                     <p>
-                        Any levels placed #51 and below are on the legacy list. We will accept records on levels for 24 hours after they fall off the top #50. After this time is up, submissions for said levels will be closed and not accepted further. HOWEVER, any level in the legacy list may be accepted if there is valid proof of the level being completed before the date of it falling off the top 50 (any legacy list level with a completion date before August 21st, 2026 is acceptable.)
+                        Any levels placed #51 and below are on the legacy list. We will accept records on levels for 24 hours after they fall off the top #50. After this time is up, submissions for said levels will be closed and not accepted further. HOWEVER, any submission from a level in the legacy list may be accepted if there is valid proof of the level being completed before the date of it falling off the top 50 (any legacy list level with a completion date before August 21st, 2026 is acceptable.)
                     </p>
                     <p>
                         You must achieve your record with the ID listed on the site. If it is a Globed copy, there is another separate ID listed that you must use.
