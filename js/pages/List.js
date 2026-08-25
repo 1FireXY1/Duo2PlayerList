@@ -120,7 +120,7 @@ export default {
                             </li>
                         </ol>
                     </template>
-                    <h3>Placements Requirements</h3>
+                    <h3>Placement Requirements</h3>
                     <p>
                         For a level to be placed on the list, at least 35% of the level's gameplay must be 2P dual. This does NOT count completely symmetrical gameplay, simultaneous clicks, or mini-games.
                     </p>
