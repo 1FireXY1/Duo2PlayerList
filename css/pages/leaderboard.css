@@ -101,3 +101,11 @@
 .page-leaderboard .player .table a:hover {
     text-decoration: underline;
 }
+.table.legacy-table {
+  border-collapse: separate;
+  border-spacing: 0 16px;
+}
+.table.legacy-table .level a {
+  display: block;
+  padding: 6px 0;
+}
