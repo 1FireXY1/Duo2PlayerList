@@ -103,8 +103,8 @@ export async function fetchLeaderboard() {
             scoreMap[verifier] ??= {
                 verified: [],
                 completed: [],
-                progressed: [],
                 legacy: [],
+                progressed: [],
             };
 
             scoreMap[verifier].verified.push({
@@ -123,8 +123,8 @@ export async function fetchLeaderboard() {
             scoreMap[user] ??= {
                 verified: [],
                 completed: [],
-                progressed: [],
                 legacy: [],
+                progressed: [],
             };
             const { completed, progressed } = scoreMap[user];
             if (record.percent === 100) {
@@ -163,8 +163,8 @@ export async function fetchLeaderboard() {
                 scoreMap[user] ??= {
                     verified: [],
                     completed: [],
+                    legacy: []
                     progressed: [],
-                    legacy: [],
                 };
 
                 // Only add 100% completions to legacy section
@@ -181,7 +181,7 @@ export async function fetchLeaderboard() {
 
     // Wrap in extra Object containing the user and total score
     const res = Object.entries(scoreMap).map(([user, scores]) => {
-        const { verified, completed, progressed, legacy } = scores;
+        const { verified, completed, legacy, progressed } = scores;
         const total = [verified, completed, progressed]
             .flat()
             .reduce((prev, cur) => prev + cur.score, 0);
@@ -191,8 +191,8 @@ export async function fetchLeaderboard() {
             total: round(total),
             verified,
             completed,
-            progressed,
             legacy,
+            progressed,
         };
     });
 
