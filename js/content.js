@@ -163,7 +163,7 @@ export async function fetchLeaderboard() {
                 scoreMap[user] ??= {
                     verified: [],
                     completed: [],
-                    legacy: []
+                    legacy: [],
                     progressed: [],
                 };
 
