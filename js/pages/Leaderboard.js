@@ -155,8 +155,8 @@ export default {
                     total: 0,
                     verified: [],
                     completed: [],
-                    progressed: [],
                     legacy: [],
+                    progressed: [],
                     rank: 0,
                 }
             );
