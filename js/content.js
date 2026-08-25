@@ -56,7 +56,7 @@ export async function fetchLegacyList() {
                         null,
                     ];
                 } catch {
-                    console.error(`Failed to load level #${rank + 1} ${path}.`);
+                    console.error(`Failed to load legacy level #${rank + 1} ${path}.`);
                     return [null, path];
                 }
             }),
@@ -79,9 +79,12 @@ export async function fetchEditors() {
 
 export async function fetchLeaderboard() {
     const list = await fetchList();
+    const legacyList = await fetchLegacyList();
 
     const scoreMap = {};
     const errs = [];
+    
+    // Process main list
     list.forEach(([level, err], rank) => {
         if (err) {
             errs.push(err);
@@ -101,6 +104,7 @@ export async function fetchLeaderboard() {
                 verified: [],
                 completed: [],
                 progressed: [],
+                legacy: [],
             };
 
             scoreMap[verifier].verified.push({
@@ -120,6 +124,7 @@ export async function fetchLeaderboard() {
                 verified: [],
                 completed: [],
                 progressed: [],
+                legacy: [],
             };
             const { completed, progressed } = scoreMap[user];
             if (record.percent === 100) {
@@ -142,9 +147,41 @@ export async function fetchLeaderboard() {
         });
     });
 
+    // Process legacy list
+    if (legacyList) {
+        legacyList.forEach(([level, err], rank) => {
+            if (err) {
+                errs.push(err);
+                return;
+            }
+
+            // Records from legacy list
+            level.records.forEach((record) => {
+                const user = Object.keys(scoreMap).find(
+                    (u) => u.toLowerCase() === record.user.toLowerCase(),
+                ) || record.user;
+                scoreMap[user] ??= {
+                    verified: [],
+                    completed: [],
+                    progressed: [],
+                    legacy: [],
+                };
+
+                // Only add 100% completions to legacy section
+                if (record.percent === 100) {
+                    scoreMap[user].legacy.push({
+                        rank: rank + 1,
+                        level: level.name,
+                        link: record.link,
+                    });
+                }
+            });
+        });
+    }
+
     // Wrap in extra Object containing the user and total score
     const res = Object.entries(scoreMap).map(([user, scores]) => {
-        const { verified, completed, progressed } = scores;
+        const { verified, completed, progressed, legacy } = scores;
         const total = [verified, completed, progressed]
             .flat()
             .reduce((prev, cur) => prev + cur.score, 0);
@@ -152,7 +189,10 @@ export async function fetchLeaderboard() {
         return {
             user,
             total: round(total),
-            ...scores,
+            verified,
+            completed,
+            progressed,
+            legacy,
         };
     });
 
