@@ -165,7 +165,7 @@ export default {
                         Each record requires clicks to be audible throughout the entire completion.
                     </p>
                     <p>
-                        You may not utilize secret ways or bugged routes.
+                        You may not utilize secret ways or bugged routes. TEST
                     </p>
                 </div>
             </div>
