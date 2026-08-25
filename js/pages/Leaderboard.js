@@ -111,11 +111,8 @@ export default {
                                 </tr>
                             </table>
                             <h2 v-if="entry.legacy.length > 0">Legacy ({{ entry.legacy.length }})</h2>
-                            <table class="table">
+                            <table class="table legacy-table">
                                 <tr v-for="score in entry.legacy">
-                                    <td class="rank">
-                                        <p>#{{ score.rank }}</p>
-                                    </td>
                                     <td class="level">
                                         <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
                                     </td>
