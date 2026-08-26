@@ -1,8 +1,10 @@
-import { fetchList } from '../content.js';
+import { fetchfullList } from '../content.js';
 import { getThumbnailFromId, getYoutubeIdFromUrl, shuffle } from '../util.js';
 
 import Spinner from '../components/Spinner.js';
 import Btn from '../components/Btn.js';
+
+const TRANSITION_TIMEOUT = 350;
 
 export default {
     components: { Spinner, Btn },
@@ -24,6 +26,10 @@ export default {
                         <input type="checkbox" id="extended" value="Extended List" v-model="useExtendedList">
                         <label for="extended">Extended List</label>
                     </div>
+                    <div class="check">
+                        <input type="checkbox" id="legacy" value="Legacy List" v-model="useLegacyList">
+                        <label for="legacy">Legacy List</label>
+                    </div>
                     <Btn @click.native.prevent="onStart">{{ levels.length === 0 ? 'Start' : 'Restart'}}</Btn>
                 </form>
                 <p class="type-label-md" style="color: #aaa">
@@ -38,35 +44,44 @@ export default {
                 </form>
             </div>
             <section class="levels-container">
-                <div class="levels">
+            <transition name="level-transition" mode="out-in" appear>
+                <div class="levels" :key="String(showRemaining) + '-' + progression.length">
                     <template v-if="levels.length > 0">
                         <!-- Completed Levels -->
-                        <div class="level" v-for="(level, i) in levels.slice(0, progression.length)">
-                            <a :href="level.video" class="video">
-                                <img :src="getThumbnailFromId(getYoutubeIdFromUrl(level.video))" alt="">
-                            </a>
-                            <div class="meta">
-                                <p>#{{ level.rank }}</p>
-                                <h2>{{ level.name }}</h2>
-                                <p style="color: #00b54b; font-weight: 700">{{ progression[i] }}%</p>
-                            </div>
-                        </div>
-                        <!-- Current Level -->
-                        <div class="level" v-if="!hasCompleted">
-                            <a :href="currentLevel.video" target="_blank" class="video">
-                                <img :src="getThumbnailFromId(getYoutubeIdFromUrl(currentLevel.video))" alt="">
-                            </a>
-                            <div class="meta">
-                                <p>#{{ currentLevel.rank }}</p>
-                                <h2>{{ currentLevel.name }}</h2>
-                                <p>{{ currentLevel.id }}</p>
-                            </div>
-                            <form class="actions" v-if="!givenUp">
-                                <input type="number" v-model="percentage" :placeholder="placeholder" :min="currentPercentage + 1" max=100>
-                                <Btn @click.native.prevent="onDone">Done</Btn>
-                                <Btn @click.native.prevent="onGiveUp" style="background-color: #e91e63;">Give Up</Btn>
-                            </form>
-                        </div>
+                        <transition-group name="level-transition" tag="div" class="level-transition-list" appear @before-enter="beforeEnter" @enter="enter" @leave="leave">
+                          <div
+                            class="level is-hidden"
+                            v-for="(level, i) in levels.slice(0, progression.length)"
+                            :key="level.id"
+                              >
+                             <a :href="level.video" class="video">
+                               <img :src="getThumbnailFromId(getYoutubeIdFromUrl(level.video))" alt="">
+                             </a>
+                             <div class="meta">
+                               <p>#{{ level.rank }}</p>
+                               <h2>{{ level.name }}</h2>
+                               <p style="color: #00b54b; font-weight: 700">{{ progression[i] }}%</p>
+                             </div>
+                           </div>
+                         </transition-group>
+                         <!-- Current Level -->
+                         <transition name="level-transition" mode="out-in" appear @before-enter="beforeEnter" @enter="enter" @leave="leave">
+                          <div class="level is-hidden" v-if="!hasCompleted" :key="currentLevel.id">
+                             <a :href="currentLevel.video" target="_blank" class="video">
+                               <img :src="getThumbnailFromId(getYoutubeIdFromUrl(currentLevel.video))" alt="">
+                             </a>
+                             <div class="meta">
+                               <p>#{{ currentLevel.rank }}</p>
+                               <h2>{{ currentLevel.name }}</h2>
+                               <p>{{ currentLevel.id }}</p>
+                             </div>
+                             <form class="actions" v-if="!givenUp">
+                               <input type="number" v-model="percentage" :placeholder="placeholder" :min="currentPercentage + 1" max=100>
+                               <Btn @click.native.prevent="onDone">Done</Btn>
+                               <Btn @click.native.prevent="onGiveUp" style="background-color: #e91e63;">Give Up</Btn>
+                             </form>
+                           </div>
+                         </transition>
                         <!-- Results -->
                         <div v-if="givenUp || hasCompleted" class="results">
                             <h1>Results</h1>
@@ -75,8 +90,7 @@ export default {
                             <Btn v-if="currentPercentage < 99 && !hasCompleted" @click.native.prevent="showRemaining = true">Show remaining levels</Btn>
                         </div>
                         <!-- Remaining Levels -->
-                        <template v-if="givenUp && showRemaining">
-                            <div class="level" v-for="(level, i) in levels.slice(progression.length + 1, levels.length - currentPercentage + progression.length)">
+                          <div class="level is-visible" v-for="(level, i) in remainingLevels" :key="level.id + '-remaining'">
                                 <a :href="level.video" target="_blank" class="video">
                                     <img :src="getThumbnailFromId(getYoutubeIdFromUrl(level.video))" alt="">
                                 </a>
@@ -84,11 +98,11 @@ export default {
                                     <p>#{{ level.rank }}</p>
                                     <h2>{{ level.name }}</h2>
                                     <p style="color: #d50000; font-weight: 700">{{ currentPercentage + 2 + i }}%</p>
-                                </div>
                             </div>
-                        </template>
+                        </div>
                     </template>
                 </div>
+            </transition>
             </section>
             <div class="toasts-container">
                 <div class="toasts">
@@ -108,6 +122,7 @@ export default {
         showRemaining: false,
         useMainList: true,
         useExtendedList: true,
+        useLegacyList: true,
         toasts: [],
         fileInput: undefined,
     }),
@@ -130,30 +145,55 @@ export default {
         this.progression = roulette.progression;
     },
     computed: {
-        currentLevel() {
-            return this.levels[this.progression.length];
-        },
-        currentPercentage() {
-            return this.progression[this.progression.length - 1] || 0;
-        },
-        placeholder() {
-            return `At least ${this.currentPercentage + 1}%`;
-        },
-        hasCompleted() {
-            return (
-                this.progression[this.progression.length - 1] >= 100 ||
-                this.progression.length === this.levels.length
-            );
-        },
-        isActive() {
-            return (
-                this.progression.length > 0 &&
-                !this.givenUp &&
-                !this.hasCompleted
-            );
-        },
+    currentLevel() {
+        return this.levels[this.progression.length];
     },
+
+    currentPercentage() {
+        return this.progression[this.progression.length - 1] || 0;
+    },
+
+    placeholder() {
+        return `At least ${this.currentPercentage + 1}%`;
+    },
+
+    hasCompleted() {
+        return (
+            this.progression[this.progression.length - 1] >= 100 ||
+            this.progression.length === this.levels.length
+        );
+    },
+
+    isActive() {
+        return (
+            this.progression.length > 0 &&
+            !this.givenUp &&
+            !this.hasCompleted
+        );
+    },
+
+    remainingLevels() {
+        if (!this.showRemaining) {
+            return [];
+        }
+
+        return this.levels.slice(this.progression.length + 1);
+    },
+},
     methods: {
+          beforeEnter(el) {
+            el.classList.add('is-hidden');
+          },
+          enter(el, done) {
+            el.classList.remove('is-hidden');
+            requestAnimationFrame(() => el.classList.add('is-visible'));
+            setTimeout(() => { if (typeof done === 'function') done(); }, TRANSITION_TIMEOUT);
+          },
+          leave(el, done) {
+            el.classList.remove('is-visible');
+            el.classList.add('is-hidden');
+            setTimeout(() => { if (typeof done === 'function') done(); }, TRANSITION_TIMEOUT);
+          },
         shuffle,
         getThumbnailFromId,
         getYoutubeIdFromUrl,
@@ -163,13 +203,13 @@ export default {
                 return;
             }
 
-            if (!this.useMainList && !this.useExtendedList) {
+            if (!this.useMainList && !this.useExtendedList && !this.useLegacyList) {
                 return;
             }
 
             this.loading = true;
 
-            const fullList = await fetchList();
+            const fullList = await fetchfullList();
 
             if (fullList.filter(([_, err]) => err).length > 0) {
                 this.loading = false;
@@ -186,9 +226,12 @@ export default {
                 video: lvl.verification,
             }));
             const list = [];
-            if (this.useMainList) list.push(...fullListMapped.slice(0, 75));
+            if (this.useMainList) list.push(...fullListMapped.slice(0, 25));
             if (this.useExtendedList) {
-                list.push(...fullListMapped.slice(75, 150));
+                list.push(...fullListMapped.slice(25, 50));
+            }
+            if (this.useLegacyList) {
+                list.push(...fullListMapped.slice(50, 500));
             }
 
             // random 100 levels
