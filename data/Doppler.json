@@ -172,7 +172,19 @@
         },
         {
             "user": "Thunderbolt",
-            "link": "https://www.youtube.com/watch?v=XK3SfmbZ0lQ",
+            "link": "https://youtu.be/wi0Qfns3Uts",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Draconyx",
+            "link": "https://www.youtube.com/watch?v=ALxN-IQXU7E",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "FireXY",
+            "link": "https://www.youtube.com/watch?v=ALxN-IQXU7E",
             "percent": 100,
             "hz": 240
         }
