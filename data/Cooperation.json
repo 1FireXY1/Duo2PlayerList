@@ -9,13 +9,25 @@
     "records": [
         {
             "user": "Smiffy777",
-            "link": "hhttps://www.youtube.com/watch?v=GOIWndVKtd4",
+            "link": "https://www.youtube.com/watch?v=GOIWndVKtd4",
             "percent": 100,
             "hz": 240
         },
         {
             "user": "Lia",
             "link": "https://www.youtube.com/watch?v=GOIWndVKtd4",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Draconyx",
+            "link": "https://www.youtube.com/watch?v=2tnJtiR0Qdo",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "FireXY",
+            "link": "https://www.youtube.com/watch?v=2tnJtiR0Qdo",
             "percent": 100,
             "hz": 240
         }
