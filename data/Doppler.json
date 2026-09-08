@@ -187,6 +187,18 @@
             "link": "https://www.youtube.com/watch?v=ALxN-IQXU7E",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Rilso",
+            "link": "https://www.youtube.com/watch?v=60Hy9zwS9i4",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "destr",
+            "link": "https://www.youtube.com/watch?v=vDy_UbfRNHA",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
