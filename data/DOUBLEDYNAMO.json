@@ -18,6 +18,18 @@
             "link": "https://www.youtube.com/watch?v=LfceHxxylFs",
             "percent": 100,
             "hz": 480
+        },
+        {
+            "user": "Rilso",
+            "link": "https://www.youtube.com/watch?v=6nRJcQ5hXiI",
+            "percent": 100,
+            "hz": 480
+        },
+        {
+            "user": "Jazz",
+            "link": "https://www.youtube.com/watch?v=-JzR_qvEajs",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
