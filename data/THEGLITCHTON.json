@@ -12,6 +12,18 @@
             "link": "https://www.youtube.com/watch?v=MBsimCBp92k",
             "percent": 100,
             "hz": 480
+        },
+        {
+            "user": "MCreeperWL",
+            "link": "https://www.youtube.com/watch?v=_0WMvyqphMw",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "Gobou",
+            "link": "https://www.youtube.com/watch?v=_0WMvyqphMw",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
