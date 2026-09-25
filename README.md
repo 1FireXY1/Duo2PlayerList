@@ -1,4 +1,5 @@
-# TOTAL LIST LEVELS: 58
+# PENDING ADDITIONS:
+The Prohibited Meat, AC1DTR1P, JessuThisIsAmziong, SYNTHETIC MOUNTAINS, Temupendence
 
 # FAQ
 
