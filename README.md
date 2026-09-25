@@ -1,5 +1,5 @@
-# PENDING ADDITIONS:
-The Prohibited Meat, AC1DTR1P, JessuThisIsAmziong, SYNTHETIC MOUNTAINS, Temupendence
+# PENDING ADDITIONS (14):
+R E M, Reliving Memories, Caramel, Devyn2Fosmire, HEX MASTERS MANOR, Honeycomb Force, Quantum Circles, INTERLOCK, The Prohibited meat, AC1DTR1P, BiPolar, JessuThisIsAmziong, SYNTHETIC MOUNTAINS, Temupendence
 
 # FAQ
 
