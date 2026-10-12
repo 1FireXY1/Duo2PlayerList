@@ -55,6 +55,18 @@
             "link": "https://www.youtube.com/watch?v=13Dtv7F2OaE",
             "percent": 100,
             "hz": 144
+        },
+        {
+            "user": "YoumanJY",
+            "link": "https://www.youtube.com/watch?v=_hVgf_bhMsI",
+            "percent": 100,
+            "hz": 288
+        },
+        {
+            "user": "BlitzzNoob",
+            "link": "https://www.youtube.com/watch?v=UQ4jMn_0s1M",
+            "percent": 100,
+            "hz": 60
         }
     ]
 }
