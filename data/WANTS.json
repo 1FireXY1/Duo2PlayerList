@@ -43,6 +43,18 @@
             "link": "https://www.youtube.com/watch?v=B__ZdcMpTxc",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "hazelirises",
+            "link": "https://www.youtube.com/watch?v=Cl5QKsM5eqg",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "vapidf",
+            "link": "https://www.youtube.com/watch?v=RCtVLpyw_uU",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
